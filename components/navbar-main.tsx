@@ -8,7 +8,7 @@ const NavBar = async () => {
   return (
     <div className="border-b">
       <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 hidden sm:flex h-16 items-center">
+        <div className="relative hidden sm:flex h-16 items-center">
           <Link href="/" className="flex-none">
             <p className="font-bold text-xl">viShoots</p>
           </Link>

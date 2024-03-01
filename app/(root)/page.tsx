@@ -5,16 +5,12 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading1 } from "@/components/ui/heading1";
 import Mirlea from "@/public/assets/mirlea.png";
+import FooterBG from "@/public/assets/footer-image.jpg";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { HeroMobile } from "./components/mobile-herosec";
-import {
-  Aperture,
-  BookOpen,
-  Crop,
-  GraduationCap,
-  LibraryBig,
-} from "lucide-react";
+import { Aperture, BookOpen, Crop, GraduationCap } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function Home() {
   const heroText = "Hello everyone,".split(" ");
@@ -162,6 +158,9 @@ export default function Home() {
           </div>
         </div>
       </Container>
+      <div className="flex justify-center items-center">
+        <Image src={FooterBG} alt="Footer Image" className="object-cover" />
+      </div>
     </main>
   );
 }

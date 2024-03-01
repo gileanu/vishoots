@@ -104,7 +104,7 @@ export default function Home() {
           <Separator />
           <div className="grid gap-5 lg:grid-cols-3 sm:grid-cols-2 mb-10">
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex">
+              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex text-muted-foreground">
                 <BookOpen size={30} className="mr-2"></BookOpen>Abilities
               </h2>
               <ul>
@@ -117,7 +117,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex">
+              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex text-muted-foreground">
                 <Crop size={30} className="mr-2"></Crop>Applications
               </h2>
               <ul>
@@ -128,7 +128,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex">
+              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex text-muted-foreground">
                 <Aperture size={30} className="mr-2"></Aperture>Gear
               </h2>
               <ul>
@@ -148,7 +148,7 @@ export default function Home() {
           <Separator />
           <div className="grid gap-5 lg:grid-cols-3 sm:grid-cols-2 mb-10">
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex">
+              <h2 className="text-xl lg:text-2xl font-bold tracking-tight row-span-1 flex text-muted-foreground">
                 <GraduationCap size={30} className="mr-2"></GraduationCap>
                 University
               </h2>

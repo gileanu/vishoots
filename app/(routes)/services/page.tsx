@@ -1,5 +1,11 @@
+import Container from "@/components/page-container";
+
 const ServicesPage = () => {
-  return <div>todo: add all services</div>;
+  return (
+    <Container>
+      <div>todo: add services</div>
+    </Container>
+  );
 };
 
 export default ServicesPage;

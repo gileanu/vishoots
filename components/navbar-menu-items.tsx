@@ -14,23 +14,18 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: { title: string; href: string }[] = [
   {
     title: "Fashion",
     href: "/gallery/fashion",
-    description:
-      "Fashion photography is a genre of photography that portrays clothing and other fashion items.",
   },
   {
     title: "Architectural",
     href: "/gallery/architecture",
-    description:
-      "Architectural photography is the subgenre of the photography discipline.",
   },
   {
     title: "Landscape",
     href: "/gallery/landscape",
-    description: "Landscape photography shows the spaces within the world.",
   },
 ];
 
@@ -60,12 +55,11 @@ export function NavBarItems() {
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
                 <ListItem
+                  className="flex align-middle"
                   key={component.title}
                   title={component.title}
                   href={component.href}
-                >
-                  {component.description}
-                </ListItem>
+                ></ListItem>
               ))}
             </ul>
           </NavigationMenuContent>

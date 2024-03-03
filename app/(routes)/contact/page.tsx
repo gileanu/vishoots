@@ -1,5 +1,11 @@
+import Container from "@/components/page-container";
+
 const ContactPage = () => {
-  return <div>Contact Page here todo</div>;
+  return (
+    <Container>
+      <div>todo: add contact page</div>
+    </Container>
+  );
 };
 
 export default ContactPage;

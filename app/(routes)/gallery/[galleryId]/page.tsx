@@ -1,5 +1,11 @@
+import Container from "@/components/page-container";
+
 const GalleryPage = () => {
-  return <div>Diferent gallerys go here</div>;
+  return (
+    <Container>
+      <div>todo: add gallery - individual page</div>
+    </Container>
+  );
 };
 
 export default GalleryPage;

@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { HeroMobile } from "./components/mobile-herosec";
 import { Aperture, BookOpen, Crop, GraduationCap } from "lucide-react";
 import NoResults from "@/components/ui/s-no-results";
+import Link from "next/link";
 
 export default function Home() {
   const heroText = "Hello everyone,".split(" ");
@@ -55,19 +56,14 @@ export default function Home() {
                 </motion.span>
               ))}
             </div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.25 }}
-              className="w-full pt-3"
-            >
+            <div className="w-full pt-3">
               <Button variant="default" className="p-5 mr-2 w-1/4">
-                Gallery
+                <Link href="/contact">Contact</Link>
               </Button>
               <Button variant="outline" className="p-5 w-1/4">
-                Contact
+                <Link href="/gallery">Gallery</Link>
               </Button>
-            </motion.div>
+            </div>
           </div>
           <div className="lg:w-3/4 md:w-1/2">
             <Image src={Mirlea} alt="Ionut Vilea" />

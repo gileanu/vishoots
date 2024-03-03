@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Mirlea from "@/public/assets/mirlea.png";
+import Link from "next/link";
 
 export const HeroMobile = () => {
   const heroText = "Hello everyone,".split(" ");
@@ -44,19 +45,24 @@ export const HeroMobile = () => {
             </motion.span>
           ))}
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25 }}
-          className="w-full flex pt-5 sm:flex"
-        >
-          <Button variant="default" className="p-5 mr-2 w-1/2 sm:w-1/4">
-            Gallery
+        <div className="w-full items-center flex pt-5 sm:flex">
+          <Button
+            asChild
+            variant="default"
+            size="lg"
+            className="mr-2 w-1/2 sm:w-1/4"
+          >
+            <Link href="/contact">Contact</Link>
           </Button>
-          <Button variant="outline" className="p-5 w-1/2 sm:w-1/4">
-            Contact
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="w-1/2 sm:w-1/4"
+          >
+            <Link href="/gallery">Gallery</Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
       <div className="w-3/4 pb-5">
         <Image src={Mirlea} alt="Ionut Vilea" />

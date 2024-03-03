@@ -56,11 +56,16 @@ export default function Home() {
                 </motion.span>
               ))}
             </div>
-            <div className="w-full pt-3">
-              <Button variant="default" className="p-5 mr-2 w-1/4">
+            <div className="w-full pt-3 justify-center items-center">
+              <Button
+                asChild
+                variant="default"
+                size="lg"
+                className="mr-2 w-1/3"
+              >
                 <Link href="/contact">Contact</Link>
               </Button>
-              <Button variant="outline" className="p-5 w-1/4">
+              <Button asChild variant="secondary" size="lg" className="w-1/3">
                 <Link href="/gallery">Gallery</Link>
               </Button>
             </div>

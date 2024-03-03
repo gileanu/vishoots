@@ -10,7 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { HeroMobile } from "./components/mobile-herosec";
 import { Aperture, BookOpen, Crop, GraduationCap } from "lucide-react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import NoResults from "@/components/ui/s-no-results";
 
 export default function Home() {
   const heroText = "Hello everyone,".split(" ");
@@ -81,15 +81,7 @@ export default function Home() {
           />
           <Separator />
           <div className="grid gap-5 lg:grid-cols-3 sm:grid-cols-2 mb-5">
-            <div className="bg-slate-300 w-full h-64">Gal1</div>
-            <div className="bg-slate-300 w-full h-64">Gal2</div>
-            <div className="bg-slate-300 w-full h-64">Gal3</div>
-            <div className="bg-slate-300 w-full h-64">Gal4</div>
-            <div className="bg-slate-300 w-full h-64">Gal5</div>
-            <div className="bg-slate-300 w-full h-64">Gal6</div>
-            <div className="bg-slate-300 w-full h-64">Gal7</div>
-            <div className="bg-slate-300 w-full h-64">Gal8</div>
-            <div className="bg-slate-300 w-full h-64">Gal9</div>
+            <NoResults />
           </div>
         </div>
         <div>

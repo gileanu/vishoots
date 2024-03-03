@@ -17,19 +17,19 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Fashion",
-    href: "/category/fashion",
+    href: "/gallery/fashion",
     description:
       "Fashion photography is a genre of photography that portrays clothing and other fashion items.",
   },
   {
     title: "Architectural",
-    href: "/category/architecture",
+    href: "/gallery/architecture",
     description:
       "Architectural photography is the subgenre of the photography discipline.",
   },
   {
     title: "Landscape",
-    href: "/category/landscape",
+    href: "/gallery/landscape",
     description: "Landscape photography shows the spaces within the world.",
   },
 ];
@@ -42,6 +42,13 @@ export function NavBarItems() {
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/services" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

@@ -21,7 +21,7 @@ const ContactPage = () => {
           style={{
             objectFit: "cover",
           }}
-          className="z-0 lg:hidden"
+          className="z-0 lg:hidden dark:opacity-50"
         ></Image>
         <ContactForm />
       </div>

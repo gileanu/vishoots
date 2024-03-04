@@ -10,7 +10,7 @@ import ContactForm from "./components/form";
 
 const ContactPage = () => {
   return (
-    <div className="h-screen w-screen flex">
+    <div className="h-full w-screen flex">
       <div className="h-full w-full lg:w-1/2 flex items-center justify-center relative">
         <Image
           src={contactImage}

@@ -7,7 +7,7 @@ import {
 
 const ContactForm = () => {
   return (
-    <div className="w-[450px] z-10">
+    <div className="w-4/5 sm:w-[450px] z-10">
       <Card>
         <CardHeader>
           <CardTitle>Contact me</CardTitle>

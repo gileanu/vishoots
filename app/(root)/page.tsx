@@ -10,8 +10,8 @@ import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import { HeroMobile } from "./components/mobile-herosec";
 import { Aperture, BookOpen, Crop, GraduationCap } from "lucide-react";
-import NoResults from "@/components/ui/s-no-results";
 import Link from "next/link";
+import NoResults from "@/components/ui/s-no-results";
 
 export default function Home() {
   const heroText = "Hello everyone,".split(" ");
@@ -77,11 +77,11 @@ export default function Home() {
         <HeroMobile />
         <div>
           <Heading1
-            title="Featured Galleries"
-            description="View my recent work"
+            title="Featured galleries"
+            description="Some of my best work"
           />
           <Separator />
-          <div className="grid gap-5 lg:grid-cols-3 sm:grid-cols-2 mb-5">
+          <div className="grid gap-5 lg:grid-cols-3 sm:grid-cols-2 mb-10">
             <NoResults />
           </div>
         </div>

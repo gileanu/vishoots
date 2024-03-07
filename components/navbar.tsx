@@ -4,6 +4,8 @@ import getCategories from "@/actions/get-categories";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./theme-toggle";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import MainNavMobile from "./navbar-mobile";
 
 export const revalidate = 0;
 
@@ -25,9 +27,7 @@ const Navbar = async () => {
           <ModeToggle />
         </div>
         <div className="ml-auto md:hidden">
-          <Button size="icon" variant="ghost">
-            <Menu />
-          </Button>
+          <MainNavMobile data={categories} />
         </div>
       </div>
     </div>

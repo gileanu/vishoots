@@ -49,7 +49,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
                   route.active
-                    ? "text-black"
+                    ? "text-black dark:text-white"
                     : "text-neutral-600 dark:text-neutral-300"
                 )}
               >

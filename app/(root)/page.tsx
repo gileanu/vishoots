@@ -13,7 +13,7 @@ import { Aperture, BookOpen, Crop, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import NoResults from "@/components/ui/s-no-results";
 
-export default function Home() {
+const Home = async () => {
   const heroText = "Hello everyone,".split(" ");
   const heroDesc =
     "I'm Ionut, a certified photographer with 7+ years' experience in portrait and event photography, and 2+ years in videography. My passion is creating unforgettable memories through visual storytelling. Continuously expanding my skills and seeking new opportunities for growth and creativity.".split(
@@ -156,4 +156,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

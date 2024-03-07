@@ -38,7 +38,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuTrigger>
-          <Link href="/gallery">Galleries</Link>
+          <Link href="/galleries">Galleries</Link>
         </NavigationMenuTrigger>
         <NavigationMenuContent>
           <ul className="grid w-[200px] gap-3 p-4 grid-cols-1">

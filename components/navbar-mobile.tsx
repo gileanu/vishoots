@@ -49,7 +49,7 @@ const MainNavMobile: React.FC<MainNavMobileProps> = ({ data }) => {
               <AccordionItem value="item-1">
                 <AccordionTrigger>
                   <Link
-                    href="/gallery"
+                    href="/galleries"
                     className="text-md font-medium transition-colors"
                   >
                     Gallery

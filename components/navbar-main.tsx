@@ -3,12 +3,9 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
@@ -25,9 +22,9 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/category/${route.id}`,
+    href: `/galleries/${route.id}`,
     label: route.name,
-    active: pathname === `/category/${route.id}`,
+    active: pathname === `/galleries/${route.id}`,
   }));
 
   return (
@@ -40,16 +37,20 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuTrigger>Galleries</NavigationMenuTrigger>
+        <NavigationMenuTrigger>
+          <Link href="/gallery">Galleries</Link>
+        </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+          <ul className="grid w-[200px] gap-3 p-4 grid-cols-1">
             {routes.map((route) => (
               <Link
                 key={route.href}
                 href={route.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-black",
-                  route.active ? "text-black" : "text-neutral-500"
+                  "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
+                  route.active
+                    ? "text-black"
+                    : "text-neutral-600 dark:text-neutral-300"
                 )}
               >
                 {route.label}

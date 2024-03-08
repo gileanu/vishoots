@@ -1,11 +1,13 @@
 import Container from "@/components/page-container";
 
-const GalleryPage = () => {
+const IndGalleryPage = async () => {
   return (
     <Container>
-      <div>todo: add gallery - individual page</div>
+      <div>
+        <div></div>
+      </div>
     </Container>
   );
 };
 
-export default GalleryPage;
+export default IndGalleryPage;

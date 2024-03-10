@@ -22,9 +22,9 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/galleries/${route.id}`,
+    href: `/galleries/${route.name}`,
     label: route.name,
-    active: pathname === `/galleries/${route.id}`,
+    active: pathname === `/galleries/${route.name}`,
   }));
 
   return (
@@ -41,7 +41,10 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           <Link href="/galleries">Galleries</Link>
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[200px] gap-3 p-4 grid-cols-1">
+          <p className="p-4 border-b text-gray-400">
+            View galleries by category
+          </p>
+          <ul className="grid w-[400px] gap-3 p-4 grid-cols-2">
             {routes.map((route) => (
               <Link
                 key={route.href}

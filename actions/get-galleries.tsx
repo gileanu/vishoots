@@ -6,10 +6,10 @@ const URL = `${process.env.NEXT_PUBLIC_API_URL}/galleries`;
 
 interface Query {
   categoryId?: string;
-  isFeatured?: string;
+  isFeatured?: boolean;
 }
 
-const getGalleries = async (query: Query): Promise<Gallery> => {
+const getGalleries = async (query: Query): Promise<Gallery[]> => {
   const url = queryString.stringifyUrl({
     url: URL,
     query: {

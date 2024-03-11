@@ -22,9 +22,9 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/galleries/${route.categorySlug}`,
+    href: `/categories/${route.categorySlug}`,
     label: route.name,
-    active: pathname === `/galleries/${route.categorySlug}`,
+    active: pathname === `/categories/${route.categorySlug}`,
   }));
 
   return (
@@ -38,7 +38,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuTrigger>
-          <Link href="/galleries">Galleries</Link>
+          <Link href="/categories">Categories</Link>
         </NavigationMenuTrigger>
         <NavigationMenuContent>
           <p className="p-4 border-b text-gray-400">

@@ -8,19 +8,19 @@ export interface Category {
   id: string;
   name: string;
   categorySlug: string;
-  billboardId: Billboard;
+  billboard: Billboard;
 }
 
 export interface Gallery {
   id: string;
   featImage: string;
-  images: Image[];
   title: string;
   gallerySlug: string;
   location: string;
   specs: string;
-  category: string;
+  category: Category;
   isFeatures: boolean;
+  images: Image[];
 }
 
 export interface Image {

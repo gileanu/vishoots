@@ -22,9 +22,9 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/categories/${route.categorySlug}`,
+    href: `/categories/${route.id}`,
     label: route.name,
-    active: pathname === `/categories/${route.categorySlug}`,
+    active: pathname === `/categories/${route.id}`,
   }));
 
   return (

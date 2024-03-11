@@ -1,17 +1,16 @@
+import getBillboards from "@/actions/get-billboards";
 import getCategories from "@/actions/get-categories";
 import Container from "@/components/page-container";
-import Test from "./components/test";
-import getBillboards from "@/actions/get-billboards";
 
-const GalleryPage = async () => {
-  const categories = await getCategories();
+const GalleryPageCategories = async () => {
   const billboards = await getBillboards();
+  const categories = await getCategories();
+  console.log(categories);
   return (
     <Container>
-      <div>There are {categories.length} categories</div>
-      <Test data={categories} billboards={billboards} />
+      <div>Gallery Page by categories</div>
     </Container>
   );
 };
 
-export default GalleryPage;
+export default GalleryPageCategories;

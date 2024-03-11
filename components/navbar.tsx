@@ -1,11 +1,9 @@
 import Link from "next/link";
 import MainNav from "./navbar-main";
 import getCategories from "@/actions/get-categories";
-import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
 import { ModeToggle } from "./theme-toggle";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import MainNavMobile from "./navbar-mobile";
+import getBillboards from "@/actions/get-billboards";
 
 export const revalidate = 0;
 

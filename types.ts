@@ -7,7 +7,8 @@ export interface Billboard {
 export interface Category {
   id: string;
   name: string;
-  billboard: Billboard;
+  categorySlug: string;
+  billboardId: Billboard;
 }
 
 export interface Gallery {
@@ -15,6 +16,7 @@ export interface Gallery {
   featImage: string;
   images: Image[];
   title: string;
+  gallerySlug: string;
   location: string;
   specs: string;
   category: string;

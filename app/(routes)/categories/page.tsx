@@ -5,6 +5,7 @@ import { Heading1 } from "@/components/ui/heading1";
 
 const GalleryPageCategories = async () => {
   const galleries = await getGalleries({ isFeatured: true });
+  console.log(galleries);
   return (
     <>
       <Container>

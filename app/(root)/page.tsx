@@ -66,7 +66,7 @@ const Home = async () => {
                 <Link href="/contact">Contact</Link>
               </Button>
               <Button asChild variant="secondary" size="lg" className="w-1/3">
-                <Link href="/gallery">Gallery</Link>
+                <Link href="/categories">Gallery</Link>
               </Button>
             </div>
           </div>
@@ -75,16 +75,6 @@ const Home = async () => {
           </div>
         </div>
         <HeroMobile />
-        <div>
-          <Heading1
-            title="Featured galleries"
-            description="Some of my best work"
-          />
-          <Separator />
-          <div className="grid gap-5 lg:grid-cols-3 sm:grid-cols-2 mb-10">
-            <NoResults />
-          </div>
-        </div>
         <div>
           <Heading1
             title="Skills"

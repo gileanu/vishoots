@@ -3,7 +3,7 @@ interface CategoryContainerProps {
 }
 
 const CategoryContainer: React.FC<CategoryContainerProps> = ({ children }) => {
-  return <div className="mt-2 mx-2 lg:mx-auto max-w-5xl pt-20">{children}</div>;
+  return <div className="mt-2 mx-2 lg:mx-auto max-w-5xl pt-4">{children}</div>;
 };
 
 export default CategoryContainer;

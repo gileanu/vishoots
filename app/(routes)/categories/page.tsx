@@ -1,29 +1,31 @@
-import getBillboards from "@/actions/get-billboards";
 import getCategories from "@/actions/get-categories";
 import getGalleries from "@/actions/get-galleries";
-import BillboardCategory from "@/components/billboard-category";
+import CategoriesAll from "@/components/categories-all";
 import GalleryList from "@/components/gallery-list";
 import Container from "@/components/page-container";
 import { Heading1 } from "@/components/ui/heading1";
+import { Separator } from "@/components/ui/separator";
 
 const GalleryPageCategories = async () => {
   const galleries = await getGalleries({ isFeatured: true });
-  const billboards = await getBillboards();
+  const categories = await getCategories();
 
   return (
     <>
-      <div className="grid w-screen">
-        {billboards.map((item) => (
-          <BillboardCategory data={item} key={item.id} />
-        ))}
-      </div>
       <Container>
         <Heading1
           title="View featured Galleries"
           description="My favorite galleries"
         />
+        <Separator />
         <GalleryList items={galleries} />
+        <Heading1
+          title="View Galleries by category"
+          description="Each category tells a story"
+        />
+        <Separator className="mb-10" />
       </Container>
+      <CategoriesAll data={categories} />
     </>
   );
 };

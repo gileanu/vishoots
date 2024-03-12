@@ -1,7 +1,7 @@
 const NoResults = () => {
   return (
-    <div className="flex  h-full w-full text-neutral-400">
-      No results rn, no cap
+    <div className="flex py-10 h-full w-full text-neutral-400">
+      Nothing to show right now :(
     </div>
   );
 };

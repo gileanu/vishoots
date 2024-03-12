@@ -25,9 +25,9 @@ const MainNavMobile: React.FC<MainNavMobileProps> = ({ data }) => {
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/galleries/${route.id}`,
+    href: `/categories/${route.id}`,
     label: route.name,
-    active: pathname === `/galleries/${route.id}`,
+    active: pathname === `/categories/${route.id}`,
   }));
   return (
     <Sheet>
@@ -49,7 +49,7 @@ const MainNavMobile: React.FC<MainNavMobileProps> = ({ data }) => {
               <AccordionItem value="item-1">
                 <AccordionTrigger>
                   <Link
-                    href="/galleries"
+                    href="/categories"
                     className="text-md font-medium transition-colors"
                   >
                     Gallery

@@ -11,7 +11,7 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
     <>
       <div className="overflow-hidden">
         <div
-          className="h-screen overflow-hidden bg-cover bg-center"
+          className="h-screen overflow-hidden bg-cover bg-fixed bg-center"
           style={{ backgroundImage: `url(${data?.imageUrl})` }}
         ></div>
       </div>

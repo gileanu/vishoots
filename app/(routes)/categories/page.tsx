@@ -1,4 +1,5 @@
 import getBillboards from "@/actions/get-billboards";
+import getCategories from "@/actions/get-categories";
 import getGalleries from "@/actions/get-galleries";
 import BillboardCategory from "@/components/billboard-category";
 import GalleryList from "@/components/gallery-list";

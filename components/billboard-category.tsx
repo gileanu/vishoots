@@ -15,7 +15,7 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
     <>
       <div className="overflow-hidden bg-background/85">
         <div
-          className="h-screen overflow-hidden bg-cover md:bg-fixed bg-center"
+          className="h-screen overflow-hidden bg-fixed bg-cover bg-center"
           style={{ backgroundImage: `url(${data?.imageUrl})` }}
         >
           <CategoryContainer>

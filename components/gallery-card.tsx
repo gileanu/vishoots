@@ -17,12 +17,12 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ data }) => {
   };
   return (
     <div
-      className="bg-white dark:bg-background group cursor-pointer rounded-xl border p-3 space-y-4"
+      className="bg-white dark:bg-background group cursor-pointer rounded-md border p-3 space-y-4 shadow-md"
       onClick={handleClick}
     >
-      <div className="aspect-square rounded-xl bg-gray-300 relative">
+      <div className="aspect-square rounded-md bg-gray-300 relative shadow-md">
         <Image
-          src={data?.images[0].url}
+          src={data?.featImage}
           alt="Image"
           fill
           className="aspect-square object-cover rounded-md"

@@ -3,9 +3,7 @@ interface ContainerProps {
 }
 
 const GalleryContainer: React.FC<ContainerProps> = ({ children }) => {
-  return (
-    <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">{children}</div>
-  );
+  return <div className="mx-auto md:mx-2 max-w-5xl pt-24 ">{children}</div>;
 };
 
 export default GalleryContainer;

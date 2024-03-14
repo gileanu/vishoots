@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import { Category } from "@/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import NoResults from "./ui/s-no-results";
 
 interface MainNavProps {
   data: Category[];
@@ -45,6 +46,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
             View galleries by category
           </p>
           <ul className="grid w-[400px] gap-3 p-4 grid-cols-2">
+            {routes.length === 0 && <NoResults />}
             {routes.map((route) => (
               <Link
                 key={route.href}

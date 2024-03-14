@@ -1,9 +1,9 @@
 "use client";
 
 import { Billboard as BillboardType, Category } from "@/types";
-import CategoryContainer from "./category-container";
-import { Button } from "./ui/button";
-import Link from "next/link";
+import IconButton from "./ui/icon-button";
+import { Expand } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface BillboardProps {
   data: BillboardType;
@@ -11,26 +11,30 @@ interface BillboardProps {
 }
 
 const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/categories/${info.id}`);
+  };
   return (
-    <>
-      <div className="overflow-hidden bg-background/85">
-        <div
-          className="h-screen overflow-hidden bg-fixed bg-cover bg-center"
-          style={{ backgroundImage: `url(${data?.imageUrl})` }}
-        >
-          <CategoryContainer>
-            <div className="h-full ml-auto flex justify-start">
-              <h1 className="text-2xl lg:text-4xl font-bold tracking-tight backdrop-blur-md bg-white/85 dark:bg-background/85 p-4 rounded-md">
-                {data.label}
-              </h1>
-            </div>
-            <Button asChild className="mt-4" size="lg" variant="outline">
-              <Link href={`/categories/${info.id}`}>View Gallery</Link>
-            </Button>
-          </CategoryContainer>
+    <div
+      style={{ backgroundImage: `url(${data?.imageUrl})` }}
+      className="h-[500px] my-4 rounded-md shadow-md bg-cover bg-center group cursor-pointer"
+    >
+      <div className="h-full align-bottom">
+        <div className="p-2 opacity-0 group-hover:opacity-100 transition gap-4">
+          <IconButton
+            className="flex gap-2 m-2 p-2"
+            title="View Category"
+            icon={<Expand size={20} className="text-gray-500" />}
+            onClick={handleClick}
+          />
+        </div>
+        <div className="p-2 mx-4 md:w-2/3 rounded-md backdrop-blur-md bg-white/85 dark:bg-background/85">
+          <h1 className="font-bold text-xl">{data.label}</h1>
+          <p>{info.name}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

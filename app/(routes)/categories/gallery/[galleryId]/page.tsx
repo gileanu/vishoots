@@ -7,6 +7,7 @@ import Gallery from "@/components/gallery";
 import GalleryInfo from "@/components/info";
 import Image from "next/image";
 import CategoryContainer from "@/components/category-container";
+import Container from "@/components/page-container";
 
 export const revalidate = 0;
 
@@ -23,17 +24,17 @@ const IndGalleryPage: React.FC<IndGalleryPageProps> = async ({ params }) => {
   });
   return (
     <div>
-      <CategoryContainer>
+      <Container>
         <div className="h-screen">
           <Image
             src={gallery.featImage}
             fill
             alt="Feat Image"
             className="object-cover"
-            quality={80}
+            quality={90}
             priority={true}
           ></Image>
-          <div className="pt-24">
+          <div className="relative">
             <GalleryInfo data={gallery} />
           </div>
         </div>
@@ -44,7 +45,7 @@ const IndGalleryPage: React.FC<IndGalleryPageProps> = async ({ params }) => {
         />
         <Separator />
         <GalleryList items={suggestedGalleries} />
-      </CategoryContainer>
+      </Container>
     </div>
   );
 };

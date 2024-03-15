@@ -30,8 +30,8 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
           />
         </div>
         <div className="p-2 mx-4 md:w-2/3 rounded-md backdrop-blur-md bg-white/85 dark:bg-background/85">
-          <h1 className="font-bold text-xl">{data.label}</h1>
-          <p>{info.name}</p>
+          <h1 className="font-bold text-xl">{info.name}</h1>
+          <p>{data.label}</p>
         </div>
       </div>
     </div>

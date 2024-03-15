@@ -2,7 +2,7 @@
 
 import { Billboard as BillboardType, Category } from "@/types";
 import IconButton from "./ui/icon-button";
-import { Expand } from "lucide-react";
+import { Images } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 interface BillboardProps {
@@ -25,7 +25,7 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
           <IconButton
             className="flex gap-2 m-2 p-2"
             title="View Category"
-            icon={<Expand size={20} className="text-gray-500" />}
+            icon={<Images size={20} className="text-gray-500" />}
             onClick={handleClick}
           />
         </div>

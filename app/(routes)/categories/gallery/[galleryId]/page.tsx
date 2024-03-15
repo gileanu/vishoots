@@ -22,26 +22,30 @@ const IndGalleryPage: React.FC<IndGalleryPageProps> = async ({ params }) => {
     categoryId: gallery?.category.id,
   });
   return (
-    <CategoryContainer>
-      <div className="h-screen">
-        <div>
+    <div>
+      <CategoryContainer>
+        <div className="h-screen">
           <Image
             src={gallery.featImage}
             fill
             alt="Feat Image"
             className="object-cover"
+            quality={80}
+            priority={true}
           ></Image>
-          <GalleryInfo data={gallery} />
+          <div className="pt-24">
+            <GalleryInfo data={gallery} />
+          </div>
         </div>
-      </div>
-      <Gallery images={gallery.images} />
-      <Heading1
-        title="View related Galleries"
-        description="Galleries in the same category"
-      />
-      <Separator />
-      <GalleryList items={suggestedGalleries} />
-    </CategoryContainer>
+        <Gallery images={gallery.images} />
+        <Heading1
+          title="View related Galleries"
+          description="Galleries in the same category"
+        />
+        <Separator />
+        <GalleryList items={suggestedGalleries} />
+      </CategoryContainer>
+    </div>
   );
 };
 

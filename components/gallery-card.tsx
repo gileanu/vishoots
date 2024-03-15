@@ -29,7 +29,11 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ data }) => {
         />
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
-            <IconButton icon={<Expand size={20} className="text-gray-500" />} />
+            <IconButton
+              className="flex gap-2 m-2 p-2"
+              title="View Gallery"
+              icon={<Expand size={20} className="text-gray-500" />}
+            />
           </div>
         </div>
       </div>

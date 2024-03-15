@@ -6,7 +6,7 @@ interface GalleryInfoProps {
 
 const GalleryInfo: React.FC<GalleryInfoProps> = ({ data }) => {
   return (
-    <div className="flex flex-col gap-y-2 border shadow-md rounded-md p-4 backdrop-blur-md bg-white/85 dark:bg-background/85 mt-20 max-w-[330px]">
+    <div className="flex flex-col gap-y-2 border shadow-md rounded-md p-4 backdrop-blur-md bg-white/85 dark:bg-background/85  max-w-[350px]">
       <p className="text-sm text-gray-400">Gallery:</p>
       <h1 className="text-2xl font-bold w-full">{data.title}</h1>
       <p className="text-sm text-gray-400">Location:</p>

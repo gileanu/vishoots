@@ -14,17 +14,17 @@ const GalleryPageCategories = async () => {
     <>
       <Container>
         <Heading1
-          title="View Galleries by category"
-          description="Each category tells a story"
-        />
-        <Separator className="mb-10" />
-        <CategoriesAll data={categories} />
-        <Heading1
           title="View featured Galleries"
           description="My favorite galleries"
         />
         <Separator />
         <GalleryList items={galleries} />
+        <Heading1
+          title="View Galleries by category"
+          description="Each category tells a story"
+        />
+        <Separator className="mb-10" />
+        <CategoriesAll data={categories} />
       </Container>
     </>
   );

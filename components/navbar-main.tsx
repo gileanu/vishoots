@@ -9,7 +9,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { cn } from "@/lib/utils";
 import { Category } from "@/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -42,26 +41,21 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           <Link href="/categories">Categories</Link>
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <p className="p-4 border-b text-gray-400">
+          <p className="px-6 py-4 border-b shadow-sm text-gray-400">
             View galleries by category
           </p>
-          <ul className="grid w-[400px] gap-3 p-4 grid-cols-2">
+          <div className="grid w-[300px] gap-2 p-2 grid-cols-1">
             {routes.length === 0 && <NoResults />}
             {routes.map((route) => (
-              <Link
-                key={route.href}
-                href={route.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-black dark:hover:text-white",
-                  route.active
-                    ? "text-black dark:text-white"
-                    : "text-neutral-600 dark:text-neutral-300"
-                )}
-              >
-                {route.label}
-              </Link>
+              <NavigationMenuItem key={route.href}>
+                <Link href={route.href}>
+                  <NavigationMenuLink className="group inline-flex h-10 w-full items-center  rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    {route.label}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
             ))}
-          </ul>
+          </div>
         </NavigationMenuContent>
       </NavigationMenuItem>
       <NavigationMenuItem>

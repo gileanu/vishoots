@@ -1,4 +1,16 @@
 import { Gallery } from "@/types";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "./ui/drawer";
+import { Button } from "./ui/button";
+import { GalleryHorizontalIcon } from "lucide-react";
 
 interface GalleryInfoProps {
   data: Gallery;
@@ -6,15 +18,45 @@ interface GalleryInfoProps {
 
 const GalleryInfo: React.FC<GalleryInfoProps> = ({ data }) => {
   return (
-    <div className="w-[350px] relative">
-      <div className="flex flex-col gap-y-1 border shadow-md rounded-md p-4 backdrop-blur-md bg-white/85 dark:bg-background/85  max-w-[350px]">
-        <p className="text-sm text-gray-400">Gallery:</p>
-        <h1 className="text-2xl font-bold w-full">{data.title}</h1>
-        <p className="text-sm text-gray-400">Category:</p>
-        <p>{data.category.name}</p>
-        <p className="text-sm text-gray-600">{data.location}</p>
-        <p className="text-sm text-gray-600">{data.specs}</p>
-      </div>
+    <div className="p-2 fixed">
+      <Drawer>
+        <DrawerTrigger asChild>
+          <Button
+            variant="ghost"
+            className="backdrop-blur-md bg-white/85 dark:bg-background/85"
+          >
+            <GalleryHorizontalIcon className="mr-4 h-6 w-6" />{" "}
+            <p className="text-md">Details</p>
+          </Button>
+        </DrawerTrigger>
+        <DrawerContent>
+          <div className="mx-auto w-full max-w-sm">
+            <DrawerHeader>
+              <DrawerTitle>Move Goal</DrawerTitle>
+              <DrawerDescription>
+                Set your daily activity goal.
+              </DrawerDescription>
+            </DrawerHeader>
+            <div className="p-4 pb-0">
+              <div className="flex items-center justify-center space-x-2">
+                <div className="flex-1 text-center">
+                  <div className="text-7xl font-bold tracking-tighter"></div>
+                  <div className="text-[0.70rem] uppercase text-muted-foreground">
+                    Calories/day
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3 h-[120px]"></div>
+            </div>
+            <DrawerFooter>
+              <Button>Submit</Button>
+              <DrawerClose asChild>
+                <Button variant="outline">Cancel</Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </div>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 };

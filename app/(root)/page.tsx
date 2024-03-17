@@ -21,10 +21,16 @@ const Home = async () => {
         />
         <Separator />
         <GalleryListHome items={galleries} />
-        <Heading1 title="About me" description="Learn more about me" />
+        <Heading1
+          title="Learn more about me"
+          description="Learn more about me"
+        />
         <Separator />
         <AboutSection />
-        <Heading1 title="Work experience" description="Work" />
+        <Heading1
+          title="Check out my work experience"
+          description="Work experiences"
+        />
         <Separator />
         <WorkTimeline />
       </Container>

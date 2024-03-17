@@ -17,7 +17,7 @@ const GalleryCardHome: React.FC<GalleryCardProps> = ({ data }) => {
   };
   return (
     <div
-      className="bg-white dark:bg-background group cursor-pointer rounded-md border p-3 space-y-4 shadow-md"
+      className="bg-white dark:bg-background group cursor-pointer rounded-md border p-3 space-y-4 shadow-md overflow-y-hidden"
       onClick={handleClick}
     >
       <div className="aspect-square rounded-md bg-gray-300 shadow-md relative w-[250px] h-[250px]">

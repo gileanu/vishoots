@@ -29,7 +29,7 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
           className="aspect-square object-cover rounded-md"
         />
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
-          <div className="flex gap-x-6 justify-center">
+          <div className="flex gap-x-6 justify-start">
             <IconButton
               className="flex justify-start gap-2 m-2 p-2"
               title="View Category"
@@ -39,8 +39,8 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
         </div>
       </div>
       <div>
-        <h1 className="font-bold text-2xl">{data.label}</h1>
-        <p className="text-xs text-muted-foreground">{info.name}</p>
+        <h1 className="font-bold text-2xl">{info.name}</h1>
+        <p className="text-xs text-muted-foreground">{data.label}</p>
       </div>
     </div>
   );

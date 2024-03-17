@@ -1,7 +1,8 @@
+"use client";
+
 import { Billboard as BillboardType } from "@/types";
 import { Separator } from "./separator";
-import GalleryContainer from "../gallery-container";
-import Container from "../page-container";
+import { Heading1 } from "./heading1";
 
 interface BillboardProps {
   data: BillboardType;
@@ -16,8 +17,8 @@ const Billboard: React.FC<BillboardProps> = ({ data }) => {
           style={{ backgroundImage: `url(${data?.imageUrl})` }}
         ></div>
       </div>
-      <div className="font-bold text-3xl py-4 sm:text-5xl lg:text-6xl">
-        {data.label}
+      <div className="pt-10 text-2xl md:text-3xl lg:text-6xl font-bold tracking-tight">
+        <Heading1 title={data.label} description="" />
         <Separator />
       </div>
     </>

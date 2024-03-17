@@ -4,6 +4,7 @@ import getCategories from "@/actions/get-categories";
 import { ModeToggle } from "./theme-toggle";
 import MainNavMobile from "./navbar-mobile";
 import getBillboards from "@/actions/get-billboards";
+import { Separator } from "./ui/separator";
 
 export const revalidate = 0;
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,67 +9,112 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+const fadeInAnimation = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3 * index,
+    },
+  }),
+};
 
 const AboutSection = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
-      <Card>
-        <CardHeader>
-          <CardTitle>Exp 1</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent className="px-6">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            accusamus tempore cumque repellat est neque, ratione laboriosam esse
-            itaque qui, adipisci saepe repudiandae dicta, at dolores repellendus
-            ad soluta quaerat.
-          </p>
-        </CardContent>
-        <CardFooter>
-          <Button className="mt-4" variant="default">
-            Contact
-          </Button>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Exp 1</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent className="px-6">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            accusamus tempore cumque repellat est neque, ratione laboriosam esse
-            itaque qui, adipisci saepe repudiandae dicta, at dolores repellendus
-            ad soluta quaerat.
-          </p>
-        </CardContent>
-        <CardFooter>
-          <Button className="mt-4" variant="default">
-            Contact
-          </Button>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Exp 1</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent className="px-6">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            accusamus tempore cumque repellat est neque, ratione laboriosam esse
-            itaque qui, adipisci saepe repudiandae dicta, at dolores repellendus
-            ad soluta quaerat.
-          </p>
-        </CardContent>
-        <CardFooter>
-          <Button className="mt-4" variant="default">
-            Contact
-          </Button>
-        </CardFooter>
-      </Card>
+      <motion.div
+        variants={fadeInAnimation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        custom="1"
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle>Exp 1</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent className="px-6">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              accusamus tempore cumque repellat est neque, ratione laboriosam
+              esse itaque qui, adipisci saepe repudiandae dicta, at dolores
+              repellendus ad soluta quaerat.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Button className="mt-4" variant="default">
+              Contact
+            </Button>
+          </CardFooter>
+        </Card>
+      </motion.div>
+      <motion.div
+        variants={fadeInAnimation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        custom="2"
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle>Exp 1</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent className="px-6">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              accusamus tempore cumque repellat est neque, ratione laboriosam
+              esse itaque qui, adipisci saepe repudiandae dicta, at dolores
+              repellendus ad soluta quaerat.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Button className="mt-4" variant="default">
+              Contact
+            </Button>
+          </CardFooter>
+        </Card>
+      </motion.div>
+      <motion.div
+        variants={fadeInAnimation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        custom="3"
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle>Exp 1</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent className="px-6">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              accusamus tempore cumque repellat est neque, ratione laboriosam
+              esse itaque qui, adipisci saepe repudiandae dicta, at dolores
+              repellendus ad soluta quaerat.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <Button className="mt-4" variant="default">
+              Contact
+            </Button>
+          </CardFooter>
+        </Card>
+      </motion.div>
     </div>
   );
 };

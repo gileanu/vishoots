@@ -5,6 +5,9 @@ import { Separator } from "@/components/ui/separator";
 import HeroSection from "./components/hero-section";
 import GalleryListHome from "@/components/gallery-list-home";
 import AboutSection from "./components/about-me";
+import HomeFooter from "./components/home-footer";
+import FooterImage from "@/public/assets/footer-image.jpg";
+import WorkTimeline from "./components/work-timeline";
 
 const Home = async () => {
   const galleries = await getGalleries({ isFeatured: true });
@@ -19,9 +22,13 @@ const Home = async () => {
         <Separator />
         <GalleryListHome items={galleries} />
         <Heading1 title="About me" description="Learn more about me" />
-        <AboutSection />
         <Separator />
+        <AboutSection />
+        <Heading1 title="Work experience" description="Work" />
+        <Separator />
+        <WorkTimeline />
       </Container>
+      <HomeFooter image={FooterImage} />
     </main>
   );
 };

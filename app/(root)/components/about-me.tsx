@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { Book } from "lucide-react";
 
 const fadeInAnimation = {
   initial: {
@@ -21,13 +22,15 @@ const fadeInAnimation = {
     x: 0,
     transition: {
       delay: 0.3 * index,
+      type: "spring",
+      stiffness: 50,
     },
   }),
 };
 
 const AboutSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-5">
+    <div className="grid px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-14 overflow-hidden">
       <motion.div
         variants={fadeInAnimation}
         initial="initial"
@@ -39,7 +42,9 @@ const AboutSection = () => {
       >
         <Card>
           <CardHeader>
-            <CardTitle>Exp 1</CardTitle>
+            <CardTitle className="flex flex-initial gap-2">
+              <Book /> Exp 1
+            </CardTitle>
             <CardDescription>Card Description</CardDescription>
           </CardHeader>
           <CardContent className="px-6">
@@ -50,11 +55,7 @@ const AboutSection = () => {
               repellendus ad soluta quaerat.
             </p>
           </CardContent>
-          <CardFooter>
-            <Button className="mt-4" variant="default">
-              Contact
-            </Button>
-          </CardFooter>
+          <CardFooter></CardFooter>
         </Card>
       </motion.div>
       <motion.div
@@ -68,7 +69,9 @@ const AboutSection = () => {
       >
         <Card>
           <CardHeader>
-            <CardTitle>Exp 1</CardTitle>
+            <CardTitle className="flex flex-initial gap-2">
+              <Book /> Exp 1
+            </CardTitle>
             <CardDescription>Card Description</CardDescription>
           </CardHeader>
           <CardContent className="px-6">
@@ -79,11 +82,7 @@ const AboutSection = () => {
               repellendus ad soluta quaerat.
             </p>
           </CardContent>
-          <CardFooter>
-            <Button className="mt-4" variant="default">
-              Contact
-            </Button>
-          </CardFooter>
+          <CardFooter></CardFooter>
         </Card>
       </motion.div>
       <motion.div
@@ -97,7 +96,9 @@ const AboutSection = () => {
       >
         <Card>
           <CardHeader>
-            <CardTitle>Exp 1</CardTitle>
+            <CardTitle className="flex flex-initial gap-2">
+              <Book /> Exp 1
+            </CardTitle>
             <CardDescription>Card Description</CardDescription>
           </CardHeader>
           <CardContent className="px-6">
@@ -108,11 +109,7 @@ const AboutSection = () => {
               repellendus ad soluta quaerat.
             </p>
           </CardContent>
-          <CardFooter>
-            <Button className="mt-4" variant="default">
-              Contact
-            </Button>
-          </CardFooter>
+          <CardFooter></CardFooter>
         </Card>
       </motion.div>
     </div>

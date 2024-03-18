@@ -16,6 +16,8 @@ const fadeInAnimation = {
     y: 0,
     transition: {
       delay: 0.1 * index,
+      type: "spring",
+      stiffness: 70,
     },
   }),
 };
@@ -29,7 +31,7 @@ const GalleryListHome: React.FC<GalleryListProps> = ({ items }) => {
     <>
       <ScrollArea className="mb-5">
         {items.length === 0 && <NoResults />}
-        <div className="mb-4 flex flex-row gap-4 overflow-hidden">
+        <div className="mb-4 pt-4 flex flex-row gap-4 overflow-hidden">
           {items.map((item, index) => (
             <motion.li
               className="mb-4"

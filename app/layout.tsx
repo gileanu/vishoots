@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import PageTransitionLayout from "@/layouts/PageTransitionLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Navbar />
-          {children}
+          <PageTransitionLayout>{children}</PageTransitionLayout>
           <Footer />
         </ThemeProvider>
       </body>

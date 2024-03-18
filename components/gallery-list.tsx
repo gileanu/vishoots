@@ -15,6 +15,8 @@ const fadeInAnimation = {
     y: 0,
     transition: {
       delay: 0.1 * index,
+      type: "spring",
+      stiffness: 50,
     },
   }),
 };

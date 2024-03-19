@@ -7,7 +7,7 @@ import GalleryListHome from "@/components/gallery-list-home";
 import AboutSection from "./components/about-me";
 import HomeFooter from "./components/home-footer";
 import FooterImage from "@/public/assets/footer-image.jpg";
-import WorkTimeline from "./components/work-timeline";
+import { WorkTimeline } from "./components/work-timeline";
 
 const Home = async () => {
   const galleries = await getGalleries({ isFeatured: true });

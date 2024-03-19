@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -30,7 +29,7 @@ const fadeInAnimation = {
 
 const AboutSection = () => {
   return (
-    <div className="grid px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-14 overflow-hidden">
+    <div className="grid pt-3 pb-12 px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden">
       <motion.div
         variants={fadeInAnimation}
         initial="initial"
@@ -40,7 +39,7 @@ const AboutSection = () => {
         }}
         custom="1"
       >
-        <Card>
+        <Card className="shadow-md">
           <CardHeader>
             <CardTitle className="flex flex-initial gap-2">
               <Book /> Exp 1
@@ -67,7 +66,7 @@ const AboutSection = () => {
         }}
         custom="2"
       >
-        <Card>
+        <Card className="shadow-md">
           <CardHeader>
             <CardTitle className="flex flex-initial gap-2">
               <Book /> Exp 1
@@ -94,7 +93,7 @@ const AboutSection = () => {
         }}
         custom="3"
       >
-        <Card>
+        <Card className="shadow-md">
           <CardHeader>
             <CardTitle className="flex flex-initial gap-2">
               <Book /> Exp 1

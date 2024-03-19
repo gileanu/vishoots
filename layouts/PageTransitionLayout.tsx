@@ -1,28 +1,25 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ReactNode, FC, useState, useEffect } from "react";
+import { ReactNode, FC } from "react";
 
-// ROUTER
-import { useRouter } from "next/navigation";
-
-// TYPES
 interface ILayoutProps {
   children: ReactNode;
 }
 
 const PageTransitionLayout: FC<ILayoutProps> = ({ children }) => {
-  const router = useRouter();
   return (
     <AnimatePresence mode={"wait"}>
       <motion.div
-        key={router.push.name}
+        key={children?.toString.length}
         initial="initialState"
         animate="animateState"
         exit="exitState"
         transition={{
           type: "tween",
-          duration: 0.5,
+          duration: 1,
+          amount: 0.5,
+          once: false,
         }}
         variants={{
           initialState: {
@@ -35,7 +32,7 @@ const PageTransitionLayout: FC<ILayoutProps> = ({ children }) => {
             opacity: 0,
           },
         }}
-        className="min-h-screen w-full" // Feel free to add your classes here
+        className="min-h-screen w-full"
       >
         {children}
       </motion.div>

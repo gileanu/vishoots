@@ -17,6 +17,7 @@ const GalleryTab: React.FC<GalleryTabProps> = ({ image }) => {
               fill
               src={image.url}
               alt="Image"
+              quality={50}
               className="object-cover object-center"
             />
           </span>

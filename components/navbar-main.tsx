@@ -44,7 +44,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           <p className="px-6 py-4 border-b shadow-sm text-gray-400">
             View galleries by category
           </p>
-          <div className="grid w-[300px] gap-2 p-2 grid-cols-1">
+          <div className="grid w-[350px] gap-1 p-2 grid-cols-2">
             {routes.length === 0 && <NoResults />}
             {routes.map((route) => (
               <NavigationMenuItem key={route.href}>

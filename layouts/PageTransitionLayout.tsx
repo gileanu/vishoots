@@ -11,7 +11,6 @@ const PageTransitionLayout: FC<ILayoutProps> = ({ children }) => {
   return (
     <AnimatePresence mode={"wait"}>
       <motion.div
-        key={children?.toString.length}
         initial="initialState"
         animate="animateState"
         exit="exitState"
@@ -27,9 +26,6 @@ const PageTransitionLayout: FC<ILayoutProps> = ({ children }) => {
           },
           animateState: {
             opacity: 1,
-          },
-          exitState: {
-            opacity: 0,
           },
         }}
         className="min-h-screen w-full"

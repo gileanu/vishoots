@@ -20,11 +20,7 @@ const IndGalleryPage: React.FC<IndGalleryPageProps> = async ({ params }) => {
     categoryId: gallery?.category.id,
   });
   return (
-    <div>
-      <div
-        style={{ backgroundImage: `url(${gallery?.featImage})` }}
-        className="h-screen rounded-md overflow-hidden bg-cover bg-center"
-      ></div>
+    <>
       <Container>
         <Gallery images={gallery.images} />
         <Heading1
@@ -34,7 +30,7 @@ const IndGalleryPage: React.FC<IndGalleryPageProps> = async ({ params }) => {
         <Separator />
         <GalleryList items={suggestedGalleries} />
       </Container>
-    </div>
+    </>
   );
 };
 

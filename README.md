@@ -2,9 +2,7 @@
 
 ## Platform for Showcasing Photography Work
 
-Full-stack website designed to elegantly display a photography portfolio. Initial idea for this website was [Antonio Erdeljac](https://github.com/AntonioErdeljac) video on how to
-
-to build a [Full-stack E-Commerce website and Admin dashboard](https://www.youtube.com/watch?v=5miHyP6lExg).
+Full-stack website designed to elegantly display a photography portfolio. Initial idea for this website was [Antonio Erdeljac](https://github.com/AntonioErdeljac) video on how to build a [Full-stack E-Commerce website and Admin dashboard](https://www.youtube.com/watch?v=5miHyP6lExg).
 
 For a behind-the-scenes look at how everything works, check out the [viShoots-admin repository](https://github.com/gileanu/vishoots-admin).
 
@@ -23,9 +21,9 @@ For a behind-the-scenes look at how everything works, check out the [viShoots-ad
 
 ![1710958872221](image/README/1710958872221.png)
 
-Currently mostly static, only dinamic desction is the "Featured Galleries" section.
+Currently mostly static, only dynamic section is the "Featured Galleries" section.
 
-TODO: Create a setup page redirect after user added Portfolio name - Admin Dashboard
+TODO: Create a setup page redirect after user added Portfolio name for: "About me" and "Work" sections - Admin Dashboard
 
 #### Categories
 

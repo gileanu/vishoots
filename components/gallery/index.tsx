@@ -19,9 +19,9 @@ const fadeInAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.1 * index,
+      delay: 0.02 * index,
       type: "spring",
-      stiffness: 70,
+      stiffness: 50,
     },
   }),
 };
@@ -32,10 +32,8 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
   const [clickedImg, setClickedImg] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
 
-  const handleClick = (image: any, index: any) => {
-    setCurrentIndex(index);
+  const handleClick = (image: any) => {
     setClickedImg(image.url);
   };
 
@@ -58,10 +56,10 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             variants={fadeInAnimation}
             initial="initial"
             whileInView="animate"
-            whileHover={{ scale: 1.03 }}
             viewport={{
               once: true,
             }}
+            whileHover={{ scale: 1.02 }}
             custom={index}
           >
             <Image
@@ -69,8 +67,8 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               width={500}
               height={500}
               alt="Gallery Image"
-              className="relative my-3 rounded-md"
-              onClick={() => handleClick(image, index)}
+              className="relative my-3 rounded-md hover:opacity-50 transition-all cursor-pointer"
+              onClick={() => handleClick(image)}
             />
           </motion.div>
         ))}

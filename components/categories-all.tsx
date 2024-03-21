@@ -11,7 +11,7 @@ const CategoriesAll: React.FC<CategoriesAllProps> = ({ data }) => {
     categoryId: item.id,
   }));
   return (
-    <div className="my-10 grid gap-4">
+    <div className="my-10 flex flex-col gap-4">
       {data.length === 0 && <NoResults />}
       {categories.map((item) => (
         <CategoryAllInner key={item.categoryId} params={item.categoryId} />

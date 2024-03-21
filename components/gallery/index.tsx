@@ -67,7 +67,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               width={500}
               height={500}
               alt="Gallery Image"
-              className="relative my-3 rounded-md hover:opacity-50 transition-all cursor-pointer"
+              className="relative my-3 rounded-md sm:hover:opacity-50 transition-all cursor-pointer"
               onClick={() => handleClick(image)}
             />
           </motion.div>

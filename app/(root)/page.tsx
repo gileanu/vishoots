@@ -9,6 +9,8 @@ import HomeFooter from "./components/home-footer";
 import FooterImage from "@/public/assets/footer-image.jpg";
 import { WorkTimeline } from "./components/work-timeline";
 
+export const revalidate = 0;
+
 const Home = async () => {
   const galleries = await getGalleries({ isFeatured: true });
   return (

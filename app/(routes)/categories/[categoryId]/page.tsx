@@ -1,10 +1,8 @@
 import getCategory from "@/actions/get-category";
 import getGalleries from "@/actions/get-galleries";
-import GalleryCard from "@/components/gallery-card";
 import GalleryList from "@/components/gallery-list";
 import Container from "@/components/page-container";
 import Billboard from "@/components/ui/billboard";
-import NoResults from "@/components/ui/s-no-results";
 
 export const revalidate = 0;
 
@@ -20,7 +18,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
   return (
     <>
       <Container>
-        <Billboard data={category.billboard} />
+        <Billboard data={category.billboard} category={category} />
         <GalleryList items={galleries} />
       </Container>
     </>

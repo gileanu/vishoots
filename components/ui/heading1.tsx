@@ -34,8 +34,8 @@ export const Heading1: React.FC<HeadingProps> = ({ title, description }) => {
             transition={{ staggerChildren: 0.02 }}
             aria-hidden
           >
-            {title.split("").map((char) => (
-              <motion.span variants={defaultAnim} key={char}>
+            {title.split("").map((char, index) => (
+              <motion.span variants={defaultAnim} key={index}>
                 {char}
               </motion.span>
             ))}
@@ -52,8 +52,8 @@ export const Heading1: React.FC<HeadingProps> = ({ title, description }) => {
             transition={{ staggerChildren: 0.02 }}
             aria-hidden
           >
-            {description.split("").map((char) => (
-              <motion.span variants={defaultAnim} key={char}>
+            {description.split("").map((char, index) => (
+              <motion.span variants={defaultAnim} key={index}>
                 {char}
               </motion.span>
             ))}

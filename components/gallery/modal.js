@@ -1,5 +1,4 @@
 import { X } from "lucide-react";
-import Image from "next/image";
 
 const Modal = ({ clickedImg, setClickedImg }) => {
   const handleClick = (e) => {
@@ -8,9 +7,9 @@ const Modal = ({ clickedImg, setClickedImg }) => {
     }
   };
   return (
-    <div className="overlay dismiss z-50" onClick={handleClick}>
-      <img src={clickedImg} alt="bigger pic" className="rounded-md" />
-      <span className="dismiss" onClick={handleClick}>
+    <div className="dismiss overlay z-50" onClick={handleClick}>
+      <img src={clickedImg} alt="bigger pic" className="rounded-md shadow-md" />
+      <span className="dismiss " onClick={handleClick}>
         <X />
       </span>
     </div>

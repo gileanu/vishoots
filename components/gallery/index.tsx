@@ -4,11 +4,27 @@ import { Image as ImageType } from "@/types";
 
 import Image from "next/image";
 import Masonry from "react-masonry-css";
-import { motion } from "framer-motion";
 import Modal from "./modal";
 
 import React, { useState } from "react";
 import "photoswipe/style.css";
+import { motion } from "framer-motion";
+
+const fadeInAnimation = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * index,
+      type: "spring",
+      stiffness: 70,
+    },
+  }),
+};
 
 interface GalleryProps {
   images: ImageType[];
@@ -23,11 +39,31 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     setClickedImg(image.url);
   };
 
+  const breakpointColumnsObj = {
+    default: 3,
+    700: 2,
+    500: 1,
+  };
+
   return (
     <>
-      <Masonry breakpointCols={3} className="flex gap-3">
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="flex gap-3 pb-10"
+      >
         {images.map((image, index) => (
-          <motion.div className="relative" key={image.id}>
+          <motion.div
+            className="relative"
+            key={image.id}
+            variants={fadeInAnimation}
+            initial="initial"
+            whileInView="animate"
+            whileHover={{ scale: 1.03 }}
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+          >
             <Image
               src={image.url}
               width={500}

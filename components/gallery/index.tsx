@@ -66,6 +66,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               src={image.url}
               width={500}
               height={500}
+              unoptimized
               alt="Gallery Image"
               className="relative my-3 rounded-md sm:hover:opacity-50 transition-all cursor-pointer"
               onClick={() => handleClick(image)}

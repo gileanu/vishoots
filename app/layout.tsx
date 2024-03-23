@@ -22,9 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <Navbar />
-          <PageTransitionLayout>{children}</PageTransitionLayout>
-          <Footer />
+          <PageTransitionLayout>
+            <Navbar />
+            {children}
+            <Footer />
+          </PageTransitionLayout>
         </ThemeProvider>
       </body>
     </html>

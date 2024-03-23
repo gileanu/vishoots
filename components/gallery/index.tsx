@@ -43,6 +43,9 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     500: 1,
   };
 
+  // optimize images before uploading to website // to add unoptimized
+  // to Image component
+
   return (
     <>
       <Masonry
@@ -66,7 +69,6 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
               src={image.url}
               width={500}
               height={500}
-              unoptimized
               alt="Gallery Image"
               className="relative my-3 rounded-md sm:hover:opacity-50 transition-all cursor-pointer"
               onClick={() => handleClick(image)}

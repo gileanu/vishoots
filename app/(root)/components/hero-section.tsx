@@ -11,26 +11,16 @@ const visible = { opacity: 1, y: 0, transition: { duration: 1 } };
 const HeroSection = () => {
   return (
     <div className="flex sm:h-auto flex-col-reverse md:flex-row mb-5 md:mb-20">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        className="sm:m-auto w-full md:w-1/2"
-      >
-        <motion.h1
-          variants={{
-            hidden: { opacity: 0, y: -20 },
-            visible,
-          }}
-          className="pt-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight pb-2"
-        >
-          Hello,
-        </motion.h1>
-        <motion.p className="pb-4">
+      <div className="sm:m-auto w-full md:w-1/2">
+        <h1 className="pt-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight pb-2">
+          Buna siua,
+        </h1>
+        <p className="pb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
           dolores animi. Saepe minus, deserunt, explicabo odit quod qui
           accusantium natus ullam libero unde provident aliquid vero adipisci
           consectetur tempora illo!
-        </motion.p>
+        </p>
         <div className="flex gap-2">
           <Button asChild size="lg" variant="default" className="w-1/2">
             <Link href="/contact">Contact</Link>
@@ -39,7 +29,7 @@ const HeroSection = () => {
             <Link href="/categories">View Work</Link>
           </Button>
         </div>
-      </motion.div>
+      </div>
       <div className="m-auto w-3/4 md:w-2/3">
         <Image src={Mirlea} alt="Vilea Ionut" />
       </div>

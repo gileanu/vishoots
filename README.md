@@ -15,4 +15,4 @@ For a behind-the-scenes look at how everything works, check out the [viShoots-ad
 
 ### Built using: Next.js with React, TypeScript and the App router, TailwindCSS, Prisma with Supabase
 
-Known issues are noted here: [todos](/Users/gileanu/Documents/vishoots/TODO.md)
+Known issues are noted here: [todos](TODO.md)

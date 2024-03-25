@@ -18,7 +18,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
   return (
     <>
       <Container>
-        <Billboard data={category.billboard} category={category} />
+        <Billboard data={category} />
         <GalleryList items={galleries} />
       </Container>
     </>

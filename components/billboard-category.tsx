@@ -1,20 +1,26 @@
 "use client";
 
-import { Billboard as BillboardType, Category } from "@/types";
 import IconButton from "./ui/icon-button";
 import { Images } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface BillboardProps {
-  data: BillboardType;
-  info: Category;
+  catId: string;
+  catImg: string;
+  catDesc: string;
+  catName: string;
 }
 
-const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
+const BillboardCategory: React.FC<BillboardProps> = ({
+  catId,
+  catDesc,
+  catImg,
+  catName,
+}) => {
   const router = useRouter();
   const handleClick = () => {
-    router.push(`/categories/${info.id}`);
+    router.push(`/categories/${catId}`);
   };
   return (
     <div
@@ -23,7 +29,7 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
     >
       <div className="h-[250px] md:h-[450px] rounded-md bg-gray-300 relative shadow-md">
         <Image
-          src={data?.imageUrl}
+          src={catImg}
           alt="Image"
           fill
           className="aspect-square object-cover rounded-md"
@@ -39,8 +45,8 @@ const BillboardCategory: React.FC<BillboardProps> = ({ data, info }) => {
         </div>
       </div>
       <div>
-        <h1 className="font-bold text-2xl">{info.name}</h1>
-        <p className="text-xs text-muted-foreground">{data.label}</p>
+        <h1 className="font-bold text-2xl">{catName}</h1>
+        <p className="text-xs text-muted-foreground">{catDesc}</p>
       </div>
     </div>
   );

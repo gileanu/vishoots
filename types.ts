@@ -1,14 +1,9 @@
-export interface Billboard {
-  id: string;
-  label: string;
-  imageUrl: string;
-}
-
 export interface Category {
   id: string;
   name: string;
   categorySlug: string;
-  billboard: Billboard;
+  imageUrl: string;
+  categoryDesc: string;
 }
 
 export interface Gallery {

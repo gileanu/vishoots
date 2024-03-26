@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import PageTransitionLayout from "@/layouts/PageTransitionLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "viShoots",
-  description: "Professional Photography for hire",
+  description: "Professional Photographer for hire",
 };
 
 export default function RootLayout({
@@ -22,11 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <PageTransitionLayout>
-            <Navbar />
-            {children}
-            <Footer />
-          </PageTransitionLayout>
+          <Navbar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

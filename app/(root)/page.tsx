@@ -8,6 +8,7 @@ import AboutSection from "./components/about-me";
 import HomeFooter from "./components/home-footer";
 import FooterImage from "@/public/assets/footer-image.jpg";
 import { WorkTimeline } from "./components/work-timeline";
+import { Heading2 } from "@/components/ui/heading2";
 
 export const revalidate = 0;
 
@@ -23,13 +24,13 @@ const Home = async () => {
         />
         <Separator />
         <GalleryListHome items={galleries} />
-        <Heading1
+        <Heading2
           title="Learn more about me"
           description="Learn more about me"
         />
         <Separator />
         <AboutSection />
-        <Heading1
+        <Heading2
           title="Check out my work experience"
           description="Work experiences"
         />

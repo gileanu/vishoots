@@ -35,7 +35,7 @@ const CategoriesAll: React.FC<CategoriesAllProps> = ({ data }) => {
   return (
     <div className="my-10 flex flex-col gap-4">
       {data.length === 0 && <NoResults />}
-      {categories.map((item) => (
+      {categories.map((item, index) => (
         <motion.div
           key={item.categoryId}
           variants={fadeInAnimation}
@@ -44,7 +44,7 @@ const CategoriesAll: React.FC<CategoriesAllProps> = ({ data }) => {
           viewport={{
             once: true,
           }}
-          custom="1"
+          custom={index}
         >
           <BillboardCategory
             key={item.categoryId}

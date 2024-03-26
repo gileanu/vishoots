@@ -50,7 +50,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     <>
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        className="flex gap-3 pb-10"
+        className="flex gap-3 pb-5"
       >
         {images.map((image, index) => (
           <motion.div

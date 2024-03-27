@@ -1,6 +1,6 @@
 # Sitewide todos:
 
-1. fix page transition animations
+1. ~~fix page transition animations~~
 2. fix btn routing or add onChange animations
 3. fix "Categories" navbar not redirecting, just the text redirects
 
@@ -12,13 +12,13 @@
 
 # Categories
 
-1. add animations
-2. improve loading speed, optimize images
+1. ~~add animations~~
+2. ~~improve loading speed, optimize images~~
 3. add transition animation to individual category pages
 
 # Gallery
 
-1. add information about the gallery, and implement featImg
+1. ~~add information about the gallery, and implement featImg~~
 2. optimize images
 
 # Services

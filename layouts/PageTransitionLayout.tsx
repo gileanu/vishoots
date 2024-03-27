@@ -7,7 +7,9 @@ interface ILayoutProps {
   children: ReactNode;
 }
 
-const PageTransitionLayout: FC<ILayoutProps> = ({ children }) => {
+export const revalidate = 0;
+
+const Transition: FC<ILayoutProps> = ({ children }) => {
   return (
     <AnimatePresence mode={"wait"}>
       <motion.div
@@ -36,4 +38,4 @@ const PageTransitionLayout: FC<ILayoutProps> = ({ children }) => {
   );
 };
 
-export default PageTransitionLayout;
+export default Transition;

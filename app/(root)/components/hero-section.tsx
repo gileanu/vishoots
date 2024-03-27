@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="flex sm:h-auto flex-col-reverse md:flex-row mb-5 md:mb-20">
       <div className="sm:m-auto w-full md:w-1/2">
-        <h1 className="text-4xl font-bold tracking-tight py-4">Buna siua,</h1>
+        <h1 className="text-6xl font-bold tracking-tight py-4">Buna siua,</h1>
         <p className="pb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
           dolores animi. Saepe minus, deserunt, explicabo odit quod qui

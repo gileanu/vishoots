@@ -5,6 +5,7 @@ import { Images } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Category } from "@/types";
+import { Heading2 } from "./ui/heading2";
 
 interface BillboardProps {
   category: Category;
@@ -38,10 +39,7 @@ const BillboardCategory: React.FC<BillboardProps> = ({ category }) => {
         </div>
       </div>
       <div>
-        <h1 className="font-bold text-2xl">{category.name}</h1>
-        <p className="text-md font-light text-muted-foreground">
-          {category.categoryDesc}
-        </p>
+        <Heading2 title={category.name} description={category.categoryDesc} />
       </div>
     </div>
   );

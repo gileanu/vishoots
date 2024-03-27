@@ -5,6 +5,7 @@ import NoResults from "./ui/s-no-results";
 import GalleryCardHome from "./gallery-card-home";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { motion } from "framer-motion";
+import GalleryCard from "./gallery-card";
 
 const fadeInAnimation = {
   initial: {
@@ -29,7 +30,7 @@ interface GalleryListProps {
 const GalleryListHome: React.FC<GalleryListProps> = ({ items }) => {
   return (
     <>
-      <ScrollArea className="mb-5">
+      <ScrollArea className="mb-5 mt-2">
         {items.length === 0 && <NoResults />}
         <div className="mb-4 pt-3 flex flex-row gap-4 overflow-hidden">
           {items.map((item, index) => (

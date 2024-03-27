@@ -2,7 +2,7 @@
 
 ## Platform for Showcasing Photography Work
 
-Full-stack website designed to elegantly display a photography portfolio. Initial idea for this website was [Antonio Erdeljac](https://github.com/AntonioErdeljac) video on how to build a [Full-stack E-Commerce website and Admin dashboard](https://www.youtube.com/watch?v=5miHyP6lExg).
+Full-stack website designed to elegantly display a photography portfolio.
 
 For a behind-the-scenes look at how everything works, check out the [viShoots-admin repository](https://github.com/gileanu/vishoots-admin).
 

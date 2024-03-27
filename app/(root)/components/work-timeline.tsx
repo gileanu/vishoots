@@ -23,7 +23,7 @@ const fadeInAnimation = {
 
 export function WorkTimeline() {
   return (
-    <section className="w-full flex px-4 pt-3 pb-12">
+    <div className="w-full flex px-4 pt-3 pb-12">
       <div className="1/2 pr-4 flex flex-col justify-between">
         <p>2024</p>
         <p>2023</p>
@@ -130,6 +130,6 @@ export function WorkTimeline() {
           </Alert>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

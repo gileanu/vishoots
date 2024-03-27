@@ -29,7 +29,7 @@ const fadeInAnimation = {
 
 const AboutSection = () => {
   return (
-    <section className="grid pt-3 pb-12 px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden">
+    <div className="grid pt-3 pb-12 px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden">
       <motion.div
         variants={fadeInAnimation}
         initial="initial"
@@ -111,7 +111,7 @@ const AboutSection = () => {
           <CardFooter></CardFooter>
         </Card>
       </motion.div>
-    </section>
+    </div>
   );
 };
 

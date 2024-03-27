@@ -5,6 +5,9 @@ import { Heading1 } from "@/components/ui/heading1";
 import { Separator } from "@/components/ui/separator";
 import Gallery from "@/components/gallery";
 import GalleryContainer from "./components/gallery-container";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Heading2 } from "@/components/ui/heading2";
 
 export const revalidate = 0;
 
@@ -30,12 +33,19 @@ const IndGalleryPage: React.FC<IndGalleryPageProps> = async ({ params }) => {
           <Heading1 title={gallery.title} description={gallery.category.name} />
         </div>
         <Gallery images={gallery.images} />
-
-        <div className="text-xs pb-5">
-          {gallery.location && <p>Location: {gallery.location}</p>}
-          {gallery.specs && <p>Specs: {gallery.specs}</p>}
+        <div className="text-xs">
+          {gallery.location && <p>{gallery.location}</p>}
+          {gallery.specs && <p>{gallery.specs}</p>}
         </div>
-        <Heading1
+        <div className="w-full sm:w-[350px] flex gap-2 py-4">
+          <Button asChild size="lg" variant="default" className="w-1/2">
+            <Link href="/contact">Contact</Link>
+          </Button>
+          <Button asChild size="lg" variant="secondary" className="w-1/2">
+            <Link href="/categories">Categories</Link>
+          </Button>
+        </div>
+        <Heading2
           title="View related Galleries"
           description="Galleries in the same category"
         />

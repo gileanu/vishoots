@@ -26,7 +26,7 @@ export const Heading2: React.FC<HeadingProps> = ({ title, description }) => {
     <div>
       <span>
         <h2 className="sr-only">{title}</h2>
-        <h2 className="text-2xl lg:text-4xl font-bold tracking-tight">
+        <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">
           <motion.span
             ref={ref}
             initial="hidden"

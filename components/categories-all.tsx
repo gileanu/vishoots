@@ -26,18 +26,12 @@ interface CategoriesAllProps {
 }
 
 const CategoriesAll: React.FC<CategoriesAllProps> = ({ data }) => {
-  const categories = data.map((item) => ({
-    categoryId: item.id,
-    categoryImage: item.imageUrl,
-    categoryDesc: item.categoryDesc,
-    categoryName: item.name,
-  }));
   return (
-    <div className="my-10 flex flex-col gap-4">
+    <div className="mb-10 flex flex-col gap-4">
       {data.length === 0 && <NoResults />}
-      {categories.map((item, index) => (
+      {data.map((item, index) => (
         <motion.div
-          key={item.categoryId}
+          key={item.id}
           variants={fadeInAnimation}
           initial="initial"
           whileInView="animate"
@@ -46,13 +40,7 @@ const CategoriesAll: React.FC<CategoriesAllProps> = ({ data }) => {
           }}
           custom={index}
         >
-          <BillboardCategory
-            key={item.categoryId}
-            catId={item.categoryId}
-            catImg={item.categoryImage}
-            catDesc={item.categoryDesc}
-            catName={item.categoryName}
-          />
+          <BillboardCategory key={item.id} category={item} />
         </motion.div>
       ))}
     </div>

@@ -4,23 +4,16 @@ import IconButton from "./ui/icon-button";
 import { Images } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { Category } from "@/types";
 
 interface BillboardProps {
-  catId: string;
-  catImg: string;
-  catDesc: string;
-  catName: string;
+  category: Category;
 }
 
-const BillboardCategory: React.FC<BillboardProps> = ({
-  catId,
-  catDesc,
-  catImg,
-  catName,
-}) => {
+const BillboardCategory: React.FC<BillboardProps> = ({ category }) => {
   const router = useRouter();
   const handleClick = () => {
-    router.push(`/categories/${catId}`);
+    router.push(`/categories/${category.id}`);
   };
   return (
     <div
@@ -29,7 +22,7 @@ const BillboardCategory: React.FC<BillboardProps> = ({
     >
       <div className="h-[250px] md:h-[450px] rounded-md bg-gray-300 relative shadow-md">
         <Image
-          src={catImg}
+          src={category.imageUrl}
           alt="Image"
           fill
           className="aspect-square object-cover rounded-md"
@@ -45,8 +38,10 @@ const BillboardCategory: React.FC<BillboardProps> = ({
         </div>
       </div>
       <div>
-        <h1 className="font-bold text-2xl">{catName}</h1>
-        <p className="text-xs text-muted-foreground">{catDesc}</p>
+        <h1 className="font-bold text-2xl">{category.name}</h1>
+        <p className="text-md font-light text-muted-foreground">
+          {category.categoryDesc}
+        </p>
       </div>
     </div>
   );

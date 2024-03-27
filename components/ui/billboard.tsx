@@ -10,7 +10,7 @@ interface BillboardProps {
 
 const Billboard: React.FC<BillboardProps> = ({ data }) => {
   return (
-    <div className="pt-5 text-2xl md:text-3xl lg:text-6xl font-bold tracking-tight">
+    <div className="pt-5">
       <div
         className="rounded-xl relative aspect-[16/7] md:asptect-[2.4/1] overflow-hidden bg-cover bg-center shadow-md mb-5"
         style={{ backgroundImage: `url(${data?.imageUrl})` }}

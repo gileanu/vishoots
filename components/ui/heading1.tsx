@@ -4,8 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 interface HeadingProps {
-  title: string;
-  description: string;
+  title: string | string[];
+  description: string | string[];
 }
 
 const defaultAnim = {
@@ -20,46 +20,61 @@ const defaultAnim = {
 };
 
 export const Heading1: React.FC<HeadingProps> = ({ title, description }) => {
+  const titleArray = Array.isArray(title) ? title : [title];
+  const descArray = Array.isArray(description) ? description : [description];
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
   return (
     <div>
-      <span>
-        <h1 className="sr-only">{title}</h1>
-        <h1 className="text-2xl lg:text-4xl font-bold tracking-tight">
-          <motion.span
-            ref={ref}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            transition={{ staggerChildren: 0.02 }}
-            aria-hidden
-          >
-            {title.split("").map((char, index) => (
-              <motion.span variants={defaultAnim} key={index}>
-                {char}
-              </motion.span>
-            ))}
-          </motion.span>
-        </h1>
-      </span>
-      <span>
-        <p className="sr-only">{description}</p>
-        <p className="text-sm text-muted-foreground">
-          <motion.span
-            ref={ref}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            transition={{ staggerChildren: 0.02 }}
-            aria-hidden
-          >
-            {description.split("").map((char, index) => (
-              <motion.span variants={defaultAnim} key={index}>
-                {char}
-              </motion.span>
-            ))}
-          </motion.span>
-        </p>
-      </span>
+      <h1 className="sr-only">{title}</h1>
+      <h1 className="text-2xl lg:text-4xl font-bold tracking-tight">
+        <motion.span
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ staggerChildren: 0.02 }}
+          aria-hidden
+        >
+          {titleArray.map((line, index) => (
+            <span className="block" key={index}>
+              {line.split(" ").map((word, index) => (
+                <span className="inline-block" key={index}>
+                  {word.split("").map((char, index) => (
+                    <motion.span variants={defaultAnim} key={index}>
+                      {char}
+                    </motion.span>
+                  ))}
+                  <span className="inline-block">&nbsp;</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </motion.span>
+      </h1>
+      <p className="sr-only">{description}</p>
+      <p className="text-md font-light text-muted-foreground">
+        <motion.span
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ staggerChildren: 0.02 }}
+        >
+          {descArray.map((line, index) => (
+            <span className="block" key={index}>
+              {line.split(" ").map((word, index) => (
+                <span className="inline-block" key={index}>
+                  {word.split("").map((char, index) => (
+                    <motion.span variants={defaultAnim} key={index}>
+                      {char}
+                    </motion.span>
+                  ))}
+                  <span className="inline-block">&nbsp;</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </motion.span>
+      </p>
     </div>
   );
 };

@@ -7,11 +7,9 @@ interface HomeFooterProps {
 
 const HomeFooter: React.FC<HomeFooterProps> = ({ image }) => {
   return (
-    <>
-      <div className="flex justify-center h-full w-full">
-        <Image src={image} alt="Footer Image" width="1920" height="1080" />
-      </div>
-    </>
+    <section className="flex justify-center h-full w-full">
+      <Image src={image} alt="Footer Image" width="1920" height="1080" />
+    </section>
   );
 };
 

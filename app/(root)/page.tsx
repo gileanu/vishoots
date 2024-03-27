@@ -1,6 +1,5 @@
 import getGalleries from "@/actions/get-galleries";
 import Container from "@/components/page-container";
-import { Heading1 } from "@/components/ui/heading1";
 import { Separator } from "@/components/ui/separator";
 import HeroSection from "./components/hero-section";
 import GalleryListHome from "@/components/gallery-list-home";
@@ -18,24 +17,30 @@ const Home = async () => {
     <main>
       <Container>
         <HeroSection />
-        <Heading1
-          title="View featured Galleries"
-          description="My favorite galleries"
-        />
-        <Separator />
-        <GalleryListHome items={galleries} />
-        <Heading2
-          title="Learn more about me"
-          description="Learn more about me"
-        />
-        <Separator />
-        <AboutSection />
-        <Heading2
-          title="Check out my work experience"
-          description="Work experiences"
-        />
-        <Separator />
-        <WorkTimeline />
+        <section>
+          <Heading2
+            title="View featured Galleries"
+            description="My favorite galleries"
+          />
+          <Separator />
+          <GalleryListHome items={galleries} />
+        </section>
+        <section>
+          <Heading2
+            title="Learn more about me"
+            description="Learn more about me"
+          />
+          <Separator />
+          <AboutSection />
+        </section>
+        <section>
+          <Heading2
+            title="Check out my work experience"
+            description="Work experiences"
+          />
+          <Separator />
+          <WorkTimeline />
+        </section>
       </Container>
       <HomeFooter image={FooterImage} />
     </main>

@@ -10,11 +10,9 @@ const visible = { opacity: 1, y: 0, transition: { duration: 1 } };
 
 const HeroSection = () => {
   return (
-    <div className="flex sm:h-auto flex-col-reverse md:flex-row mb-5 md:mb-20">
+    <section className="flex sm:h-auto flex-col-reverse md:flex-row mb-5 md:mb-20">
       <div className="sm:m-auto w-full md:w-1/2">
-        <h1 className="pt-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight pb-2">
-          Buna siua,
-        </h1>
+        <h1 className="text-4xl font-bold tracking-tight py-4">Buna siua,</h1>
         <p className="pb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
           dolores animi. Saepe minus, deserunt, explicabo odit quod qui
@@ -33,7 +31,7 @@ const HeroSection = () => {
       <div className="m-auto w-3/4 md:w-2/3">
         <Image src={Mirlea} alt="Vilea Ionut" />
       </div>
-    </div>
+    </section>
   );
 };
 

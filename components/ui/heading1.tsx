@@ -60,11 +60,11 @@ export const Heading1: React.FC<HeadingProps> = ({ title, description }) => {
           transition={{ staggerChildren: 0.02 }}
         >
           {descArray.map((line, index) => (
-            <span className="block" key={index}>
+            <span className="block" key={index + 1}>
               {line.split(" ").map((word, index) => (
-                <span className="inline-block" key={index}>
+                <span className="inline-block" key={index + 2}>
                   {word.split("").map((char, index) => (
-                    <motion.span variants={defaultAnim} key={index}>
+                    <motion.span variants={defaultAnim} key={index + 3}>
                       {char}
                     </motion.span>
                   ))}

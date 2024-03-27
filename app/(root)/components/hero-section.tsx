@@ -4,9 +4,6 @@ import { Button } from "@/components/ui/button";
 import Mirlea from "@/public/assets/mirlea.png";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-
-const visible = { opacity: 1, y: 0, transition: { duration: 1 } };
 
 const HeroSection = () => {
   return (

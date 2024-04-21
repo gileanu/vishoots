@@ -41,7 +41,7 @@ const info = [
 
 const WorkExp = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5 overflow-hidden">
       {info.map((item, index) => (
         <motion.div
           variants={fadeInAnimation}

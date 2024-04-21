@@ -44,7 +44,7 @@ const info = [
 
 const AboutMe = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-5 overflow-hidden">
       {info.map((item, index) => (
         <motion.div
           variants={fadeInAnimation}
@@ -55,6 +55,7 @@ const AboutMe = () => {
           }}
           custom={index}
           key={item.title}
+          className="overflow-hidden"
         >
           <Card className="h-full">
             <CardHeader>

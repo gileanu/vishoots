@@ -3,12 +3,13 @@ import getGallery from "@/actions/get-gallery";
 import Gallery from "@/components/gallery";
 import GalleryCard from "@/components/gallery-card";
 import NoResults from "@/components/no-results";
-import { Heading1 } from "@/components/ui/heading1";
+import { Button } from "@/components/ui/button";
 import { Heading2 } from "@/components/ui/heading2";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
+import { ArrowLeft, Send } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const revalidate = 0;
@@ -61,6 +62,21 @@ const CategoryPageInd: React.FC<CategoryPageIndProps> = async ({ params }) => {
         </div>
       </div>
       <Gallery images={gallery.images} />
+      <div className="flex flex-row items-center justify-start my-16 gap-2">
+        <Button asChild variant="outline" size="lg">
+          <Link href={`/portfolio/${params.categoryId}`}>
+            <ArrowLeft className="mr-4 h-4 w-4" />
+            Back
+          </Link>
+        </Button>
+        <Separator orientation="vertical" className="hidden sm:block" />
+        <Button asChild variant="default" size="lg">
+          <Link href={`/contact`}>
+            <Send className="mr-4 h-4 w-4" />
+            Contact
+          </Link>
+        </Button>
+      </div>
       <Heading2
         title="View related galleries"
         description="In the same category"

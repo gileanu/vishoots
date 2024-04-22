@@ -13,8 +13,8 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ params }) => {
   return (
     <div className="w-full h-screen flex flex-col gap-12 mt-12">
       <div className="flex flex-col justify-center items-center gap-4 text-center break-words">
-        <h1 className="text-7xl">Thank you,</h1>
-        <span className="text-5xl font-light">{params.name}</span>
+        <h1 className="text-5xl md:text-7xl">Thank you,</h1>
+        <span className="text-4xl md:text-5xl font-light">{params.name}</span>
         <p>I will contact you as soon as posible.</p>
       </div>
       <Separator />

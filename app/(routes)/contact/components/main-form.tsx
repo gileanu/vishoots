@@ -24,7 +24,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon, Send } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { isValidPhoneNumber } from "react-phone-number-input";
@@ -226,7 +226,8 @@ export const ContactForm = () => {
             )}
           />
           <div className="flex">
-            <Button disabled={loading} type="submit" className="px-10 mt-2">
+            <Button disabled={loading} type="submit" className="px-7 mt-2">
+              <Send className="mr-4 h-4 w-4" />
               Send
             </Button>
             <p className="ml-auto text-muted-foreground text-sm flex items-center">

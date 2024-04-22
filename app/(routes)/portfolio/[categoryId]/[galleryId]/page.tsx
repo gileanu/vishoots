@@ -37,8 +37,10 @@ const CategoryPageInd: React.FC<CategoryPageIndProps> = async ({ params }) => {
         />
       </div>
       <div className="min-h-80 flex flex-col gap-2 items-start justify-center">
-        <span className="text-5xl lg:text-7xl font-serif">{gallery.title}</span>
-        <span className="text-4xl lg:text-5xl text-muted-foreground font-light">
+        <span className="text-4xl md:text-5xl lg:text-7xl font-serif">
+          {gallery.title}
+        </span>
+        <span className="text-2xl md:text-4xl lg:text-5xl text-muted-foreground font-light">
           {gallery.category.name}
         </span>
         <div className="flex flex-col sm:flex-row gap-1 text-xs">

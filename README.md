@@ -16,7 +16,6 @@ For a behind-the-scenes look at how everything works, check out the [viShoots-ad
 - Next.js,
 - TypeScript,
 - TailwindCSS,
-- Prisma with Supabase,
 - UploadThing,
 - Cloudinary,
 

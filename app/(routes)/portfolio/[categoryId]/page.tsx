@@ -19,7 +19,7 @@ const CategoryPageInd: React.FC<CategoryPageIndProps> = async ({ params }) => {
     <div>
       <Heading1 title={category.name} description={category.categoryDesc} />
       {galleries.length === 0 && <NoResults />}
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-hidden pb-5">
+      <ul className="mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {galleries.map((item, index) => (
           <li key={item.id}>
             <GalleryCard data={item} index={index} key={item.id} />

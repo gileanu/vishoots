@@ -42,7 +42,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ data, index }) => {
         once: true,
       }}
       custom={index}
-      className="group pb-5"
+      className="group"
     >
       <div className="aspect-square bg-gray-300 relative z-10">
         <Image

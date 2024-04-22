@@ -10,7 +10,19 @@ For a behind-the-scenes look at how everything works, check out the [viShoots-ad
 
 - **Fast and Responsive:**
 - **Animated with Framer Motion:**
-- **Page Structure:**
-- **Contact Page with Form:**
 
-### Built using: Next.js with React, TypeScript and the App router, TailwindCSS, Prisma with Supabase
+### Built using:
+
+- Next.js,
+- TypeScript,
+- TailwindCSS,
+- Prisma with Supabase,
+- UploadThing,
+- Cloudinary,
+
+## Future releases (todo's):
+
+- [ ] more polishing, better animations / page transitions, maybe add a color theme?
+- [ ] update "/services" page, add more info or make it better
+- [ ] deploy to actual domain
+- [ ] implement email notifications on form submission

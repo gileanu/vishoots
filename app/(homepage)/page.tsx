@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <section className="flex flex-col-reverse lg:flex-row mb-10">
         <div className="sm:m-auto w-full lg:w-1/2">
-          <h1 className="text-7xl font-serif tracking-tight py-4">
+          <h1 className="pt-4 scroll-m-20 text-5xl tracking-tight lg:text-7xl">
             Buna siua,
           </h1>
           <p className="pb-4">

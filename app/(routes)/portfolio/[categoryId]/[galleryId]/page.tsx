@@ -28,15 +28,15 @@ const CategoryPageInd: React.FC<CategoryPageIndProps> = async ({ params }) => {
   });
   return (
     <div>
-      <div className="h-screen relative">
+      <div className="h-[300px] md:h-[500px] relative">
         <Image
           src={gallery.featImage}
           alt={gallery.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-md"
         />
       </div>
-      <div className="min-h-80 flex flex-col gap-2 items-start justify-center">
+      <div className="bg-muted rounded-md pl-4 mt-3 min-h-80 flex flex-col gap-2 items-start justify-center">
         <span className="text-4xl md:text-5xl lg:text-7xl font-serif">
           {gallery.title}
         </span>

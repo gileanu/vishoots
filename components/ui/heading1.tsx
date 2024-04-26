@@ -28,7 +28,7 @@ export const Heading1: React.FC<HeadingProps> = ({ title, description }) => {
   return (
     <div>
       <h1 className="sr-only">{title}</h1>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl pb-1">
+      <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-5xl pb-1">
         <motion.span
           ref={ref}
           initial="hidden"

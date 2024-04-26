@@ -66,16 +66,16 @@ export const ContactForm = () => {
     };
 
     try {
-      toast.loading("Submitting form...");
+      toast.loading("Sending..");
       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/form`, data);
       toast.dismiss();
-      toast.success("Form submitted successfully", {
+      toast.success("Sent!", {
         duration: 8000,
       });
       router.push(`/contact/thank-you/${getFirstWord(data.name)}`);
     } catch (error) {
       toast.dismiss();
-      toast.error("Error submitting form. Please try again later.", {
+      toast.error("Please try again later", {
         duration: 8000,
       });
     } finally {

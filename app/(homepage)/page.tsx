@@ -41,8 +41,8 @@ const Home = () => {
           <Image
             src={MirleaImage.url}
             alt="Vilea Ionut"
-            width="450"
-            height="250"
+            width="374"
+            height="338"
             loading="lazy"
             quality={70}
           />

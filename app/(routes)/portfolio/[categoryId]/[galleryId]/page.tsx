@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Heading2 } from "@/components/ui/heading2";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,33 +36,6 @@ const CategoryPageInd: React.FC<CategoryPageIndProps> = async ({ params }) => {
           fill
           className="aspect-square object-cover rounded-md"
         />
-      </div>
-      <div className="px-4 min-h-60 md:min-h-[500px] flex flex-col gap-2 items-start justify-center">
-        <span className="text-4xl md:text-5xl lg:text-7xl font-serif">
-          {gallery.title}
-        </span>
-        <span className="text-2xl md:text-4xl lg:text-5xl text-muted-foreground font-light">
-          {gallery.category.name}
-        </span>
-        <div className="flex flex-col sm:flex-row gap-1 text-xs">
-          {gallery.location && (
-            <>
-              <p className="text-muted-foreground">Location:</p>
-              <span>{gallery.location}</span>
-            </>
-          )}
-          {gallery.specs && (
-            <>
-              {" "}
-              <Separator
-                orientation="vertical"
-                className="h-5 hidden sm:block"
-              />
-              <p className="text-muted-foreground">Shot on:</p>
-              <span>{gallery.specs}</span>
-            </>
-          )}
-        </div>
       </div>
       <Gallery images={gallery.images} />
       <div className="flex flex-row items-center justify-start my-16 gap-2">

@@ -84,10 +84,8 @@ const subName = {
 };
 
 const container = {
-  margin: "0 auto",
-  padding: "20px 0 48px",
-  width: "850px",
-  maxWidth: "100%",
+  margin: "0px",
+  padding: "20px 0",
 };
 
 const heading1 = {
@@ -128,12 +126,6 @@ const button = {
   textAlign: "center" as const,
   display: "block",
   width: "100%",
-};
-
-const link = {
-  ...paragraph,
-  color: "#ff5a5f",
-  display: "block",
 };
 
 const hr = {

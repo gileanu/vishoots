@@ -66,6 +66,7 @@ export const ContactForm = () => {
     };
 
     try {
+      setLoading(true);
       toast.loading("Sending..");
       await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/form`, data);
       await axios.post(`api/email`, data);

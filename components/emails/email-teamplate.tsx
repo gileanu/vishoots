@@ -5,8 +5,6 @@ import {
   Head,
   Hr,
   Html,
-  Img,
-  Link,
   Preview,
   Row,
   Section,
@@ -29,7 +27,7 @@ export const viShootsEmailTemplate = ({
   phone,
   date,
 }: viShootsEmailTemplateProps) => {
-  const ptext = `Read ${name}'s review`;
+  const ptext = `View ${name}'s submition`;
 
   return (
     <Html>
@@ -38,11 +36,16 @@ export const viShootsEmailTemplate = ({
       <Body style={main}>
         <Container style={container}>
           <Section>
-            <Text style={heading}>viShoots</Text>
+            <Text style={heading1}>viShoots</Text>
           </Section>
+          <Hr style={hr} />
           <Section style={{ paddingBottom: "20px" }}>
             <Row>
-              <Text style={heading}>You have a new lead from {name}</Text>
+              <Text style={heading2}>
+                New form submition from:
+                <br />
+                <span style={subName}>{name}</span>
+              </Text>
               <Text style={paragraph}>Email:</Text>
               <Text style={review}>{email}</Text>
               <Text style={paragraph}>Phone number:</Text>
@@ -53,16 +56,31 @@ export const viShootsEmailTemplate = ({
               <Text style={review}>{date}</Text>
             </Row>
           </Section>
+          <Hr style={hr} />
+          <Section>
+            <Button style={button} href="https://vishoots-admin.vercel.app/">
+              View dashboard
+            </Button>
+          </Section>
         </Container>
       </Body>
     </Html>
   );
 };
 
+export default viShootsEmailTemplate;
+
 const main = {
   backgroundColor: "#ffffff",
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+};
+
+const subName = {
+  fontSize: "26px",
+  lineHeight: "1.3",
+  fontWeight: "700",
+  color: "#484848",
 };
 
 const container = {
@@ -72,14 +90,15 @@ const container = {
   maxWidth: "100%",
 };
 
-const userImage = {
-  margin: "0 auto",
-  marginBottom: "16px",
-  borderRadius: "50%",
+const heading1 = {
+  fontSize: "26px",
+  lineHeight: "1.3",
+  fontWeight: "700",
+  color: "#484848",
 };
 
-const heading = {
-  fontSize: "24px",
+const heading2 = {
+  fontSize: "18px",
   lineHeight: "1.3",
   fontWeight: "700",
   color: "#484848",
@@ -99,9 +118,9 @@ const review = {
 };
 
 const button = {
-  backgroundColor: "#ff5a5f",
+  backgroundColor: "#484848",
   borderRadius: "3px",
-  color: "#fff",
+  color: "#f2f3f3",
   fontSize: "18px",
   paddingTop: "19px",
   paddingBottom: "19px",

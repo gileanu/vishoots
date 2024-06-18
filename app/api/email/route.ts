@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 import { render } from "@react-email/render";
-import { viShootsEmailTemplate } from "@/components/email-teamplate";
+import { viShootsEmailTemplate } from "@/components/emails/email-teamplate";
 
 export async function POST(request: NextRequest) {
   const { email, name, message, phone, date } = await request.json();

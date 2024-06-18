@@ -42,12 +42,12 @@ export const viShootsEmailTemplate = ({
           <Section style={{ paddingBottom: "20px" }}>
             <Row>
               <Text style={heading2}>
-                New form submition from:
+                New submition from:
                 <br />
                 <span style={subName}>{name}</span>
               </Text>
               <Text style={paragraph}>Email:</Text>
-              <Text style={review}>{email}</Text>
+              <Text style={review}>{email}gileanu@gmail.com</Text>
               <Text style={paragraph}>Phone number:</Text>
               <Text style={review}>{phone}</Text>
               <Text style={paragraph}>Message:</Text>
@@ -86,7 +86,7 @@ const subName = {
 const container = {
   margin: "0 auto",
   padding: "20px 0 48px",
-  width: "580px",
+  width: "850px",
   maxWidth: "100%",
 };
 
@@ -105,8 +105,8 @@ const heading2 = {
 };
 
 const paragraph = {
-  fontSize: "18px",
-  lineHeight: "1.4",
+  fontSize: "16px",
+  lineHeight: "1",
   color: "#484848",
 };
 
@@ -134,12 +134,6 @@ const link = {
   ...paragraph,
   color: "#ff5a5f",
   display: "block",
-};
-
-const reportLink = {
-  fontSize: "14px",
-  color: "#9ca299",
-  textDecoration: "underline",
 };
 
 const hr = {

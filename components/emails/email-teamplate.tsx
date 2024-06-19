@@ -11,12 +11,13 @@ import {
   Text,
 } from "@react-email/components";
 import * as React from "react";
+import { format } from "date-fns";
 
 interface viShootsEmailTemplateProps {
-  name?: string;
-  email?: string;
+  name: string;
+  email: string;
+  phone: string;
   text?: string;
-  phone?: string;
   date?: string;
 }
 
@@ -27,8 +28,16 @@ export const viShootsEmailTemplate = ({
   phone,
   date,
 }: viShootsEmailTemplateProps) => {
-  const ptext = `View ${name}'s submition`;
-
+  function formatDate(date: string | undefined): string | undefined {
+    if (date === "No date provided") {
+      return date;
+    } else {
+      if (date && typeof date === "string") {
+        return format(new Date(date), "dd LLL, yyyy");
+      }
+    }
+  }
+  const ptext = `View ${name}'s submission`;
   return (
     <Html>
       <Head />
@@ -42,7 +51,7 @@ export const viShootsEmailTemplate = ({
           <Section style={{ paddingBottom: "20px" }}>
             <Row>
               <Text style={heading2}>
-                New submition from:
+                New submission from:
                 <br />
                 <span style={subName}>{name}</span>
               </Text>
@@ -50,10 +59,10 @@ export const viShootsEmailTemplate = ({
               <Text style={review}>{email}</Text>
               <Text style={paragraph}>Phone number:</Text>
               <Text style={review}>{phone}</Text>
+              <Text style={paragraph}>Date:</Text>
+              <Text style={review}>{formatDate(date)}</Text>
               <Text style={paragraph}>Message:</Text>
               <Text style={review}>{text}</Text>
-              <Text style={paragraph}>Time:</Text>
-              <Text style={review}>{date}</Text>
             </Row>
           </Section>
           <Hr style={hr} />

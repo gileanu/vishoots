@@ -47,7 +47,7 @@ export const viShootsEmailTemplate = ({
                 <span style={subName}>{name}</span>
               </Text>
               <Text style={paragraph}>Email:</Text>
-              <Text style={review}>{email}gileanu@gmail.com</Text>
+              <Text style={review}>{email}</Text>
               <Text style={paragraph}>Phone number:</Text>
               <Text style={review}>{phone}</Text>
               <Text style={paragraph}>Message:</Text>

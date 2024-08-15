@@ -3,7 +3,6 @@ import getGalleries from "@/actions/get-galleries";
 import GalleryCard from "@/components/gallery-card";
 import NoResults from "@/components/no-results";
 import { Heading1 } from "@/components/ui/heading1";
-import { Skeleton } from "@/components/ui/skeleton";
 
 export const revalidate = 0;
 

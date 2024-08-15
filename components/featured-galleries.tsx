@@ -2,6 +2,9 @@ import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import getGalleries from "@/actions/get-galleries";
 import NoResults from "./no-results";
 import GalleryCard from "./gallery-card";
+
+export const revalidate = 0;
+
 const FeaturedGalleries = async () => {
   const galleries = await getGalleries({ isFeatured: true });
   return (

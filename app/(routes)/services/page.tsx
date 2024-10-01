@@ -106,15 +106,15 @@ const Services = () => {
           <Heading2 title="Portrait" description="Cool looking people" />
           <p>
             Elevate your personal or professional image with my portrait
-            photography services. Whether you're looking for a timeless family
-            portrait, a stunning headshot, or a creative individual session, I
-            strive to capture the unique essence of each subject. My approach to
-            portrait photography is all about connection and authenticity. I
-            create a comfortable and relaxed environment, allowing you to
-            express yourself naturally. By focusing on the details that make
-            you, you—be it your smile, your style, or your story—I aim to
-            deliver striking images that resonate with your personality and
-            vision.
+            photography services. Whether you&apos;re looking for a timeless
+            family portrait, a stunning headshot, or a creative individual
+            session, I strive to capture the unique essence of each subject. My
+            approach to portrait photography is all about connection and
+            authenticity. I create a comfortable and relaxed environment,
+            allowing you to express yourself naturally. By focusing on the
+            details that make you, you—be it your smile, your style, or your
+            story—I aim to deliver striking images that resonate with your
+            personality and vision.
           </p>
         </div>
       </div>

@@ -15,9 +15,7 @@ const ContactPage = () => {
         </div>
         <Separator orientation="vertical" className="hidden md:block h-auto" />
         <Separator orientation="horizontal" className="md:hidden" />
-        <div className="w-full md:w-1/2 flex flex-col gap-2">
-          <FAQ />
-        </div>
+        <div className="w-full md:w-1/2 flex flex-col gap-2"></div>
       </div>
     </>
   );

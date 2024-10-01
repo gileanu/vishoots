@@ -6,8 +6,6 @@ import Link from "next/link";
 import AboutMe from "./components/about-me";
 import WorkExp from "./components/work-exp";
 
-export const revalidate = 0;
-
 const MirleaImage = {
   url: "https://utfs.io/f/c7f3adea-2884-4592-a72b-a49efe0c7d1c-hrdrm6.png",
 };
@@ -22,13 +20,16 @@ const Home = () => {
       <section className="flex flex-col-reverse lg:flex-row mb-10">
         <div className="sm:m-auto w-full lg:w-1/2">
           <h1 className="pt-4 scroll-m-20 text-5xl tracking-tight lg:text-7xl">
-            Buna siua,
+            Hello,
           </h1>
           <p className="pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            dolores animi. Saepe minus, deserunt, explicabo odit quod qui
-            accusantium natus ullam libero unde provident aliquid vero adipisci
-            consectetur tempora illo!
+            My name is Vilea Ionut, and I am a certified professional
+            photographer with over nine years of experience, specialising in
+            portrait and event photography. My passion lies in transforming
+            fleeting moments into timeless memories through the lens of my
+            camera. Every photograph I take is an opportunity to capture the
+            essence of a moment, creating lasting impressions that can be
+            cherished forever.
           </p>
           <div className="flex gap-2 pt-2 max-w-full sm:max-w-[450px]">
             <Button asChild size="lg" variant="default" className="w-1/2">

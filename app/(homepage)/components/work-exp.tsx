@@ -22,20 +22,12 @@ const fadeInAnimation = {
 
 const info = [
   {
-    title: "Work 1",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur quibusdam molestiae illum quidem id quae, reiciendis quod est quo necessitatibus non aliquam deserunt totam perspiciatis hic quis provident!",
+    title: "Cruise Ship Photographer",
+    desc: "As a cruise ship photographer, I had the incredible opportunity to capture the beauty and excitement of life at sea. My role involved working in a dynamic environment, where I photographed guests during various events, excursions, and candid moments on board. Each day brought new challenges and experiences, from formal dinners to adventurous shore excursions, allowing me to showcase the joy and adventure of cruising. working on a cruise ship also enriched my own travel experiences, as I explored various ports of call and cultures around the world. This role deepened my passion for photography and solidified my commitment to creating lasting memories for others.",
   },
   {
-    title: "Work 2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur quibusdam molestiae illum quidem id quae, reiciendis quod est quo necessitatibus non aliquam deserunt totam perspiciatis hic quis provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur",
-  },
-  {
-    title: "Work 3",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur quibusdam molestiae illum quidem id quae, reiciendis quod est quo necessitatibus non aliquam deserunt totam perspiciatis hic quis provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur",
-  },
-  {
-    title: "Work 4",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur quibusdam molestiae illum quidem id quae, reiciendis quod est quo necessitatibus non aliquam deserunt totam perspiciatis hic quis provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus consequatur",
+    title: "Freelance Photographer",
+    desc: "As a freelance photographer, I have the flexibility and creativity to explore a wide range of subjects and styles. This role has allowed me to work with diverse clients, capturing everything from intimate portraits to vibrant events. Each project presents a unique opportunity to collaborate and bring a client&apos;s vision to life. In my freelance work, I prioritise understanding my clients&apos; needs and crafting a comfortable atmosphere that encourages authentic moments. Whether I&apos;m shooting a wedding, a family gathering, or a corporate event, I focus on telling their story through my lens. This adaptability has helped me develop a keen eye for detail and an ability to anticipate and capture special moments as they unfold.",
   },
 ];
 

@@ -49,12 +49,16 @@ const Services = () => {
     <div className="flex flex-col gap-8 border">
       <div className="flex flex-col gap-10 sm:flex-row p-5">
         <div className="w-full md:w-1/2 pr-6">
-          <Heading2 title="Weddings" description="Cool weddings" />
+          <Heading2 title="Events" description="Cool events" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            facere neque magni ipsa reiciendis modi at asperiores porro officiis
-            dolorum earum amet natus ex exercitationem, nemo voluptas ipsum
-            totam dolor?
+            Capture the magic of your special moments with my professional event
+            photography services. Whether it&apos;s a wedding, corporate
+            gathering, birthday celebration, or any other milestone, I am
+            dedicated to documenting every detail and emotion of your event
+            Let&apos;s create lasting memories together!work closely with
+            clients to understand their vision and provide a personalised
+            experience, delivering stunning images that you&apos;ll cherish for
+            years to come.
           </p>
         </div>
         <Carousel className="w-full md:w-1/2 max-w-xl">
@@ -74,7 +78,6 @@ const Services = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
@@ -82,7 +85,7 @@ const Services = () => {
       <div className="flex flex-col-reverse gap-10 sm:flex-row bg-foreground/5 p-5">
         <Carousel className="w-full md:w-1/2 max-w-xl">
           <CarouselContent className="">
-            {secondSlider.map((image) => (
+            {thirdSlider.map((image) => (
               <CarouselItem
                 key={image.url}
                 className="flex h-96 w-full items-center justify-center p-6 relative"
@@ -96,33 +99,41 @@ const Services = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
         <div className="w-full md:w-1/2 pr-6">
-          <Heading2 title="Automotive" description="Cool looking cars" />
+          <Heading2 title="Portrait" description="Cool looking people" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            facere neque magni ipsa reiciendis modi at asperiores porro officiis
-            dolorum earum amet natus ex exercitationem, nemo voluptas ipsum
-            totam dolor?
+            Elevate your personal or professional image with my portrait
+            photography services. Whether you're looking for a timeless family
+            portrait, a stunning headshot, or a creative individual session, I
+            strive to capture the unique essence of each subject. My approach to
+            portrait photography is all about connection and authenticity. I
+            create a comfortable and relaxed environment, allowing you to
+            express yourself naturally. By focusing on the details that make
+            you, you—be it your smile, your style, or your story—I aim to
+            deliver striking images that resonate with your personality and
+            vision.
           </p>
         </div>
       </div>
       <div className="flex flex-col gap-10 sm:flex-row p-5">
         <div className="w-full md:w-1/2 pr-6">
-          <Heading2 title="Portret" description="Cool looking people" />
+          <Heading2 title="Automotive" description="Cool looking cars" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            facere neque magni ipsa reiciendis modi at asperiores porro officiis
-            dolorum earum amet natus ex exercitationem, nemo voluptas ipsum
-            totam dolor?
+            Welcome to my Automotive Photography services, where the passion for
+            cars meets artistic expression. Whether you&apos;re a car
+            enthusiast, a dealership, or a brand looking to showcase your
+            vehicles, I&apos;m here to help you capture the beauty and power of
+            your automotive assets. Let&apos;s collaborate to create captivating
+            images that resonate with car lovers and elevate your brand&apos;s
+            presence!
           </p>
         </div>
         <Carousel className="w-full md:w-1/2 max-w-xl">
           <CarouselContent className="">
-            {thirdSlider.map((image) => (
+            {secondSlider.map((image) => (
               <CarouselItem
                 key={image.url}
                 className="flex h-96 w-full items-center justify-center p-6 relative"

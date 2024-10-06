@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutMe from "./components/about-me";
 import WorkExp from "./components/work-exp";
+import { Suspense } from "react";
+import FeatGallLoading from "@/components/homepage-loading";
 
 const MirleaImage = {
   url: "https://utfs.io/f/c7f3adea-2884-4592-a72b-a49efe0c7d1c-hrdrm6.png",
@@ -56,7 +58,9 @@ const Home = () => {
           title="Featured galleries"
           description="My favorite galleries"
         />
-        <FeaturedGalleries />
+        <Suspense fallback={<FeatGallLoading />}>
+          <FeaturedGalleries />
+        </Suspense>
       </section>
       <section>
         <Heading2 title="About me" description="My hobbies and other stuff" />

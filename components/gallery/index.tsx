@@ -43,9 +43,6 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     500: 1,
   };
 
-  // optimize images before uploading to website // to add unoptimized
-  // to Image component
-
   return (
     <>
       <Masonry

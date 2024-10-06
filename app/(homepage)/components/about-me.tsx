@@ -30,7 +30,7 @@ const info = [
   },
   {
     title: "Hiking",
-    desc: "When I&apos;m not behind the camera, you can find me hiking in the great outdoors. I enjoy exploring new trails and immersing myself in nature's beauty. Hiking not only rejuvenates my spirit but also inspires my creativity, providing a perfect balance to my life.",
+    desc: "When I'm not behind the camera, you can find me hiking in the great outdoors. I enjoy exploring new trails and immersing myself in nature's beauty. Hiking not only rejuvenates my spirit but also inspires my creativity, providing a perfect balance to my life.",
   },
 ];
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
 import { motion } from "framer-motion";
 
 const fadeInAnimation = {
@@ -27,11 +26,11 @@ const info = [
   },
   {
     title: "Freelance Photographer",
-    desc: "As a freelance photographer, I have the flexibility and creativity to explore a wide range of subjects and styles. This role has allowed me to work with diverse clients, capturing everything from intimate portraits to vibrant events. Each project presents a unique opportunity to collaborate and bring a client&apos;s vision to life. In my freelance work, I prioritise understanding my clients&apos; needs and crafting a comfortable atmosphere that encourages authentic moments. Whether I&apos;m shooting a wedding, a family gathering, or a corporate event, I focus on telling their story through my lens. This adaptability has helped me develop a keen eye for detail and an ability to anticipate and capture special moments as they unfold.",
+    desc: "As a freelance photographer, I have the flexibility and creativity to explore a wide range of subjects and styles. This role has allowed me to work with diverse clients, capturing everything from intimate portraits to vibrant events. Each project presents a unique opportunity to collaborate and bring a client's vision to life. In my freelance work, I prioritise understanding my clients' needs and crafting a comfortable atmosphere that encourages authentic moments. Whether I'm shooting a wedding, a family gathering, or a corporate event, I focus on telling their story through my lens. This adaptability has helped me develop a keen eye for detail and an ability to anticipate and capture special moments as they unfold.",
   },
 ];
 
-const WorkExp = () => {
+const AboutMe = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5 overflow-hidden">
       {info.map((item, index) => (
@@ -44,8 +43,9 @@ const WorkExp = () => {
           }}
           custom={index}
           key={item.title}
+          className="overflow-hidden"
         >
-          <Card key={item.title}>
+          <Card className="h-full">
             <CardHeader>
               <h3 className="text-2xl">{item.title}</h3>
             </CardHeader>
@@ -59,4 +59,4 @@ const WorkExp = () => {
   );
 };
 
-export default WorkExp;
+export default AboutMe;

@@ -32,7 +32,7 @@ const routes = [
 const MainNavMobile = () => {
   return (
     <Sheet>
-      <SheetTrigger className="hover:underline">Menu</SheetTrigger>
+      <SheetTrigger className="hover:underline">Explore</SheetTrigger>
       <SheetContent className="w-2/3 border-l-0 px-4 sm:px-6">
         <div className="relative flex h-16 items-center">
           <SheetClose className="ml-auto underline">Close</SheetClose>

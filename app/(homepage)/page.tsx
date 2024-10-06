@@ -8,6 +8,8 @@ import WorkExp from "./components/work-exp";
 import { Suspense } from "react";
 import FeatGallLoading from "@/components/homepage-loading";
 
+export const revalidate = 0;
+
 const MirleaImage = {
   url: "https://utfs.io/f/c7f3adea-2884-4592-a72b-a49efe0c7d1c-hrdrm6.png",
 };
